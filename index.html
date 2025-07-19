@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,6 +60,114 @@
       font-size: 0.85rem;
       margin-right: 0.5rem;
     }
+
+    /* Experience styling */
+    #experience {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+    }
+
+    .experience-block {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-header h3 {
+      color: #004080;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    .exp-location, .exp-date {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      color: #222;
+      margin-top: 0.2rem;
+    }
+
+    .exp-project {
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    h5 {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #004080;
+    }
+
+    ul.cert-list {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      gap: 2rem;
+    }
+
+    .exp-award {
+      background-color: #e8f0fe;
+      padding: 0.6rem 1rem;
+      border-left: 4px solid #004080;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      border-radius: 6px;
+    }
+
+    .download-btn {
+      background-color: #004080;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #002d59;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      color: #004080;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .experience-block, .download-btn, .contact-link {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 0.5rem 0;
+      }
+
+      ul.cert-list {
+        columns: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -117,7 +224,7 @@
 
   <section>
     <h2>Certifications</h2>
-    <ul>
+    <ul class="cert-list">
       <li>5G Radio Site Cluster Optimization (NCSS NPS)</li>
       <li>5G Radio Optimisation – Expert</li>
       <li>NCSA 5G Solution</li>
@@ -129,6 +236,65 @@
       <li>CCP – IEFP Portugal</li>
       <li>Digital Trainer – Technical Training in Digital & Telecom</li>
     </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience</h2>
+
+    <div class="experience-block">
+      <div class="exp-header">
+        <h3>NOKIA Networks</h3>
+        <span class="exp-location">Lisbon, Portugal</span>
+        <span class="exp-date">Apr 2022 – Present</span>
+      </div>
+      <h4>RAN Performance & Optimization Specialist</h4>
+      <p class="exp-project">Project: SWAP 2G/3G/4G</p>
+
+      <h5>Responsibilities</h5>
+      <ul>
+        <li>Presented KPI-driven performance reports to customer technical teams.</li>
+        <li>Performed regular network audits and root-cause analysis.</li>
+        <li>Designed corrective actions to improve performance and reliability.</li>
+        <li>Collaborated with cross-functional teams and monitored solution impact.</li>
+      </ul>
+
+      <h5>Key Achievements</h5>
+      <ul>
+        <li>🏆 Delivered innovative automation solutions increasing project efficiency.</li>
+        <li>🤝 Strengthened customer trust through technical excellence and responsiveness.</li>
+        <li>📈 Supported strategic network decisions via insights and reporting.</li>
+      </ul>
+
+      <p class="exp-award"><strong>🎖 Award:</strong> <em>Excellence in Commitment – MWingz Project (2023)</em></p>
+    </div>
+
+    <div class="experience-block">
+      <div class="exp-header">
+        <h3>NOKIA Networks</h3>
+        <span class="exp-location">Lisbon, Portugal</span>
+        <span class="exp-date">Feb 2016 – Mar 2022</span>
+      </div>
+      <h4>RAN Integration & Commissioning Engineer</h4>
+      <p class="exp-project">Project: SWAP 2G/3G/4G/5G (MORAN & MOCN)</p>
+
+      <h5>Responsibilities</h5>
+      <ul>
+        <li>Led integration of 2,000+ Huawei sites during multi-vendor RAN modernization.</li>
+        <li>Managed remote commissioning, sector expansions, and upgrades.</li>
+        <li>Executed SCF/RFDS configurations, test calls, and NOC handovers.</li>
+      </ul>
+
+      <h5>Key Achievements</h5>
+      <ul>
+        <li>🔧 Delivered technical leadership in complex rollout environments.</li>
+        <li>⚙️ Enabled smooth collaboration across field and integration teams.</li>
+        <li>📊 Ensured delivery within timelines and optimized deployment workflows.</li>
+      </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="cv_helton_lima.pdf" download class="download-btn">📄 Download My CV (PDF)</a>
+    </div>
   </section>
 
   <section>
@@ -160,5 +326,16 @@
     <h2>Career Objectives</h2>
     <p>To advance into roles such as RAN Architect, Technical Team Lead, or Operations Manager, combining deep technical knowledge with strategic process transformation and leadership capabilities.</p>
   </section>
+
+  <footer style="margin-top: 4rem; text-align: center;">
+    <h2>Let's Connect</h2>
+    <p>I'm available for freelance projects, technical consulting, and remote RAN engagements.</p>
+    <div style="margin-top: 1rem;">
+      <a href="https://www.linkedin.com/in/heltonlimatrindade" target="_blank" class="contact-link">🔗 LinkedIn</a>
+      <a href="https://wa.me/351962462317" target="_blank" class="contact-link">💬 WhatsApp</a>
+      <a href="https://github.com/heltonlimatrindade" target="_blank" class="contact-link">💻 GitHub</a>
+      <a href="mailto:heltonlimatrindade@gmail.com" class="contact-link">✉️ Email</a>
+    </div>
+  </footer>
 </body>
 </html>
