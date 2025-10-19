@@ -1,0 +1,137 @@
+{
+  "type": "FeatureCollection",
+  "name": "cell_sites",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "LIS001",
+        "site_name": "Lisbon_Centro",
+        "vendor": "Nokia",
+        "technology": "5G",
+        "node_type": "gNodeB",
+        "status": "Active",
+        "commission_date": "2023-03-15",
+        "latitude": 38.7223,
+        "longitude": -9.1393,
+        "altitude": 120,
+        "sectors": 3,
+        "bands": "n78, B3, B7, B20",
+        "kpi_availability": 99.95,
+        "kpi_cssr": 98.5,
+        "kpi_dcr": 0.8,
+        "audit_status": "Pass"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1393, 38.7223]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "LIS002",
+        "site_name": "Lisbon_Parque",
+        "vendor": "Nokia",
+        "technology": "4G/5G",
+        "node_type": "eNodeB/gNodeB",
+        "status": "Active",
+        "commission_date": "2022-11-20",
+        "latitude": 38.7372,
+        "longitude": -9.1545,
+        "altitude": 95,
+        "sectors": 3,
+        "bands": "n78, B3, B7, B20, B28",
+        "kpi_availability": 99.92,
+        "kpi_cssr": 97.8,
+        "kpi_dcr": 1.2,
+        "audit_status": "Pass"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1545, 38.7372]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "LIS003",
+        "site_name": "Lisbon_Belem",
+        "vendor": "Nokia",
+        "technology": "4G",
+        "node_type": "eNodeB",
+        "status": "Active",
+        "commission_date": "2021-06-10",
+        "latitude": 38.6979,
+        "longitude": -9.2061,
+        "altitude": 15,
+        "sectors": 3,
+        "bands": "B3, B7, B20, B28",
+        "kpi_availability": 99.88,
+        "kpi_cssr": 98.2,
+        "kpi_dcr": 0.9,
+        "audit_status": "Warning"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.2061, 38.6979]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "LIS004",
+        "site_name": "Lisbon_Alfama",
+        "vendor": "Nokia",
+        "technology": "3G/4G",
+        "node_type": "NodeB/eNodeB",
+        "status": "Active",
+        "commission_date": "2020-09-05",
+        "latitude": 38.7115,
+        "longitude": -9.1283,
+        "altitude": 80,
+        "sectors": 3,
+        "bands": "U900, U2100, B3, B7, B20",
+        "kpi_availability": 99.85,
+        "kpi_cssr": 96.5,
+        "kpi_dcr": 1.8,
+        "audit_status": "Warning"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1283, 38.7115]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "LIS005",
+        "site_name": "Lisbon_Aeroporto",
+        "vendor": "Nokia",
+        "technology": "5G",
+        "node_type": "gNodeB",
+        "status": "Active",
+        "commission_date": "2023-08-22",
+        "latitude": 38.7713,
+        "longitude": -9.1289,
+        "altitude": 110,
+        "sectors": 6,
+        "bands": "n78, n28, B3, B7, B20",
+        "kpi_availability": 99.98,
+        "kpi_cssr": 99.1,
+        "kpi_dcr": 0.5,
+        "audit_status": "Pass"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1289, 38.7713]
+      }
+    }
+  ]
+}

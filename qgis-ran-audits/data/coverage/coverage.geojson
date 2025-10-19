@@ -1,0 +1,84 @@
+{
+  "type": "FeatureCollection",
+  "name": "coverage",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "coverage_id": "COV_LIS001",
+        "site_id": "LIS001",
+        "technology": "5G",
+        "coverage_type": "Predicted",
+        "rsrp_level": "Good",
+        "rsrp_min": -100,
+        "rsrp_max": -70,
+        "area_km2": 2.5,
+        "population": 15000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-9.1493, 38.7323],
+          [-9.1293, 38.7323],
+          [-9.1293, 38.7123],
+          [-9.1493, 38.7123],
+          [-9.1493, 38.7323]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "coverage_id": "COV_LIS002",
+        "site_id": "LIS002",
+        "technology": "4G",
+        "coverage_type": "Predicted",
+        "rsrp_level": "Excellent",
+        "rsrp_min": -95,
+        "rsrp_max": -65,
+        "area_km2": 3.2,
+        "population": 22000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-9.1645, 38.7472],
+          [-9.1445, 38.7472],
+          [-9.1445, 38.7272],
+          [-9.1645, 38.7272],
+          [-9.1645, 38.7472]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "coverage_id": "COV_LIS003",
+        "site_id": "LIS003",
+        "technology": "4G",
+        "coverage_type": "Measured",
+        "rsrp_level": "Good",
+        "rsrp_min": -105,
+        "rsrp_max": -75,
+        "area_km2": 1.8,
+        "population": 8500
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-9.2161, 38.7079],
+          [-9.1961, 38.7079],
+          [-9.1961, 38.6879],
+          [-9.2161, 38.6879],
+          [-9.2161, 38.7079]
+        ]]
+      }
+    }
+  ]
+}

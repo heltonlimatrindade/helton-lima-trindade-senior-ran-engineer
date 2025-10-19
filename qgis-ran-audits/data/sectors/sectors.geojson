@@ -1,0 +1,162 @@
+{
+  "type": "FeatureCollection",
+  "name": "sectors",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_id": "LIS001_1",
+        "site_id": "LIS001",
+        "sector_name": "Lisbon_Centro_S1",
+        "azimuth": 0,
+        "beamwidth": 65,
+        "height": 35,
+        "tilt": 4,
+        "technology": "5G NR",
+        "band": "n78",
+        "power": 40,
+        "pci": 100,
+        "tac": 1001,
+        "neighbour_count": 12,
+        "hosr": 98.5,
+        "rrc_success": 99.2,
+        "audit_issues": "None"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1393, 38.7223]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_id": "LIS001_2",
+        "site_id": "LIS001",
+        "sector_name": "Lisbon_Centro_S2",
+        "azimuth": 120,
+        "beamwidth": 65,
+        "height": 35,
+        "tilt": 4,
+        "technology": "5G NR",
+        "band": "n78",
+        "power": 40,
+        "pci": 101,
+        "tac": 1001,
+        "neighbour_count": 15,
+        "hosr": 98.8,
+        "rrc_success": 99.4,
+        "audit_issues": "None"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1393, 38.7223]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_id": "LIS001_3",
+        "site_id": "LIS001",
+        "sector_name": "Lisbon_Centro_S3",
+        "azimuth": 240,
+        "beamwidth": 65,
+        "height": 35,
+        "tilt": 4,
+        "technology": "5G NR",
+        "band": "n78",
+        "power": 40,
+        "pci": 102,
+        "tac": 1001,
+        "neighbour_count": 14,
+        "hosr": 97.9,
+        "rrc_success": 98.8,
+        "audit_issues": "Low HOSR"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1393, 38.7223]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_id": "LIS002_1",
+        "site_id": "LIS002",
+        "sector_name": "Lisbon_Parque_S1",
+        "azimuth": 30,
+        "beamwidth": 65,
+        "height": 30,
+        "tilt": 5,
+        "technology": "LTE",
+        "band": "B3",
+        "power": 43,
+        "pci": 200,
+        "tac": 1002,
+        "neighbour_count": 18,
+        "hosr": 99.1,
+        "rrc_success": 99.5,
+        "audit_issues": "None"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1545, 38.7372]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_id": "LIS002_2",
+        "site_id": "LIS002",
+        "sector_name": "Lisbon_Parque_S2",
+        "azimuth": 150,
+        "beamwidth": 65,
+        "height": 30,
+        "tilt": 5,
+        "technology": "LTE",
+        "band": "B3",
+        "power": 43,
+        "pci": 201,
+        "tac": 1002,
+        "neighbour_count": 16,
+        "hosr": 98.6,
+        "rrc_success": 99.2,
+        "audit_issues": "None"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1545, 38.7372]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sector_id": "LIS002_3",
+        "site_id": "LIS002",
+        "sector_name": "Lisbon_Parque_S3",
+        "azimuth": 270,
+        "beamwidth": 65,
+        "height": 30,
+        "tilt": 5,
+        "technology": "LTE",
+        "band": "B3",
+        "power": 43,
+        "pci": 202,
+        "tac": 1002,
+        "neighbour_count": 17,
+        "hosr": 98.9,
+        "rrc_success": 99.3,
+        "audit_issues": "Missing neighbours"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.1545, 38.7372]
+      }
+    }
+  ]
+}

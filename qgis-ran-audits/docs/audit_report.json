@@ -1,0 +1,41 @@
+{
+  "report_date": "2025-10-19T14:39:35.666664",
+  "audits": [
+    {
+      "audit_type": "Site KPIs",
+      "total_sites": 5,
+      "issues_found": 2,
+      "issues": [
+        {
+          "site_id": "LIS002",
+          "issue": "Low CSSR",
+          "value": 97.8,
+          "threshold": 98.0
+        },
+        {
+          "site_id": "LIS004",
+          "issue": "Low CSSR",
+          "value": 96.5,
+          "threshold": 98.0
+        }
+      ]
+    },
+    {
+      "audit_type": "Neighbour Relations",
+      "total_sectors": 6,
+      "total_relations": 5,
+      "issues_found": 0,
+      "issues": []
+    },
+    {
+      "audit_type": "Coverage Analysis",
+      "total_areas": 3,
+      "issues_found": 0,
+      "issues": []
+    }
+  ],
+  "summary": {
+    "total_audits": 3,
+    "total_issues": 2
+  }
+}

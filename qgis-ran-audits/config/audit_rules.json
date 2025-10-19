@@ -1,0 +1,68 @@
+{
+  "kpi_thresholds": {
+    "availability": 99.5,
+    "cssr": 98.0,
+    "dcr": 2.0,
+    "hosr": 98.0,
+    "rrc_success": 98.5,
+    "description": "Key Performance Indicator thresholds for network quality assessment"
+  },
+  "neighbour_rules": {
+    "min_neighbours": 6,
+    "max_neighbours": 32,
+    "hosr_threshold": 95.0,
+    "description": "Rules for validating neighbour relations and handover success rates"
+  },
+  "coverage_rules": {
+    "min_rsrp": -110,
+    "target_rsrp": -95,
+    "excellent_rsrp": -85,
+    "description": "Signal strength thresholds for coverage quality (dBm)"
+  },
+  "technology_specific": {
+    "5G": {
+      "min_sinr": 0,
+      "target_sinr": 10,
+      "beam_count": {
+        "min": 8,
+        "max": 64
+      }
+    },
+    "4G": {
+      "min_sinr": -3,
+      "target_sinr": 15,
+      "min_rsrq": -15,
+      "target_rsrq": -10
+    },
+    "3G": {
+      "min_rscp": -110,
+      "target_rscp": -95,
+      "min_ec_no": -12,
+      "target_ec_no": -6
+    }
+  },
+  "audit_categories": {
+    "critical": {
+      "availability_below": 99.0,
+      "dcr_above": 5.0,
+      "hosr_below": 90.0
+    },
+    "major": {
+      "availability_below": 99.5,
+      "dcr_above": 2.0,
+      "hosr_below": 95.0
+    },
+    "minor": {
+      "availability_below": 99.8,
+      "dcr_above": 1.0,
+      "hosr_below": 97.0
+    }
+  },
+  "vendor_specific": {
+    "Nokia": {
+      "netact_integration": true,
+      "supported_technologies": ["2G", "3G", "4G", "5G"],
+      "features": ["MORAN", "MOCN", "NSA", "SA"]
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "type": "FeatureCollection",
+  "name": "neighbours",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "relation_id": "NBR_001",
+        "source_sector": "LIS001_1",
+        "target_sector": "LIS002_1",
+        "relation_type": "Intra-RAT",
+        "technology": "5G",
+        "handover_attempts": 1250,
+        "handover_success": 1235,
+        "hosr": 98.8,
+        "status": "Active",
+        "audit_result": "Pass"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-9.1393, 38.7223],
+          [-9.1545, 38.7372]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "relation_id": "NBR_002",
+        "source_sector": "LIS001_2",
+        "target_sector": "LIS004_1",
+        "relation_type": "Intra-RAT",
+        "technology": "4G",
+        "handover_attempts": 980,
+        "handover_success": 960,
+        "hosr": 97.9,
+        "status": "Active",
+        "audit_result": "Warning"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-9.1393, 38.7223],
+          [-9.1283, 38.7115]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "relation_id": "NBR_003",
+        "source_sector": "LIS002_2",
+        "target_sector": "LIS003_1",
+        "relation_type": "Intra-RAT",
+        "technology": "4G",
+        "handover_attempts": 1580,
+        "handover_success": 1565,
+        "hosr": 99.0,
+        "status": "Active",
+        "audit_result": "Pass"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-9.1545, 38.7372],
+          [-9.2061, 38.6979]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "relation_id": "NBR_004",
+        "source_sector": "LIS001_1",
+        "target_sector": "LIS005_1",
+        "relation_type": "Inter-RAT",
+        "technology": "4G-5G",
+        "handover_attempts": 2100,
+        "handover_success": 2080,
+        "hosr": 99.0,
+        "status": "Active",
+        "audit_result": "Pass"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-9.1393, 38.7223],
+          [-9.1289, 38.7713]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "relation_id": "NBR_005",
+        "source_sector": "LIS003_2",
+        "target_sector": "LIS001_3",
+        "relation_type": "Intra-RAT",
+        "technology": "4G",
+        "handover_attempts": 750,
+        "handover_success": 720,
+        "hosr": 96.0,
+        "status": "Active",
+        "audit_result": "Fail"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-9.2061, 38.6979],
+          [-9.1393, 38.7223]
+        ]
+      }
+    }
+  ]
+}

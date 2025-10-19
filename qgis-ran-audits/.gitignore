@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# QGIS
+*.qgz~
+*.qgs~
+*.backup
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Reports (keep templates, ignore generated)
+docs/audit_report_*.json
+docs/audit_report_*.html
+docs/audit_report_*.pdf
+
+# Logs
+*.log

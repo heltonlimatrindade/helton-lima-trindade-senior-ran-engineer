@@ -1,0 +1,9 @@
+# Python Requirements for QGIS RAN Audits
+# No external dependencies required - uses only Python standard library
+# The script uses built-in modules: json, os, datetime, pathlib
+
+# Optional: For enhanced functionality, you can install:
+# pyqgis>=3.28  # If running scripts from command line with QGIS Python
+# pandas>=1.5.0  # For advanced data analysis
+# matplotlib>=3.6.0  # For chart generation
+# openpyxl>=3.0.0  # For Excel export
