@@ -4,338 +4,310 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Helton Lima da Trindade | Senior RAN Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+    :root {
+      --navy: #003366;
+      --blue: #0055a5;
+      --accent: #00aaff;
+      --light: #f4f7fb;
+      --white: #ffffff;
+      --gray: #6b7280;
+      --dark: #111827;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
     }
-    body {
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      padding: 2rem;
-    }
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-    }
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 2rem;
-      color: #004080;
-    }
-    ul {
-      margin-left: 1.5rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 0.75rem;
-      text-align: left;
-    }
-    .tag {
-      background: #004080;
-      color: white;
-      display: inline-block;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      margin-right: 0.5rem;
-    }
-
-    /* Experience styling */
-    #experience {
-      background-color: #ffffff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      margin-top: 2rem;
-    }
-
-    .experience-block {
-      margin-bottom: 2.5rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .exp-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      margin-bottom: 0.5rem;
-    }
-
-    .exp-header h3 {
-      color: #004080;
-      font-size: 1.4rem;
-      margin: 0;
-    }
-
-    .exp-location, .exp-date {
-      font-size: 0.95rem;
-      color: #666;
-    }
-
-    h4 {
-      font-size: 1.2rem;
-      color: #222;
-      margin-top: 0.2rem;
-    }
-
-    .exp-project {
-      font-style: italic;
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
-
-    h5 {
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #004080;
-    }
-
-    ul.cert-list {
-      columns: 2;
-      -webkit-columns: 2;
-      -moz-columns: 2;
-      gap: 2rem;
-    }
-
-    .exp-award {
-      background-color: #e8f0fe;
-      padding: 0.6rem 1rem;
-      border-left: 4px solid #004080;
-      margin-top: 1rem;
-      font-size: 0.95rem;
-      border-radius: 6px;
-    }
-
-    .download-btn {
-      background-color: #004080;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    .download-btn:hover {
-      background-color: #002d59;
-    }
-
-    .contact-link {
-      display: inline-block;
-      margin: 0.5rem 1rem;
-      color: #004080;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .contact-link:hover {
-      text-decoration: underline;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+    nav { position: fixed; top: 0; width: 100%; background: var(--navy); display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.3); }
+    nav .logo { color: white; font-weight: 700; font-size: 1.1rem; }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a { color: #cbd5e1; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
+    nav ul a:hover { color: var(--accent); }
+    .hero { min-height: 100vh; background: linear-gradient(135deg, var(--navy) 0%, #005599 60%, #0077cc 100%); display: flex; align-items: center; justify-content: center; text-align: center; padding: 6rem 2rem 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .hero-content { position: relative; max-width: 750px; }
+    .hero h1 { font-size: clamp(2rem,5vw,3.2rem); color: white; font-weight: 900; line-height: 1.1; margin-bottom: 0.75rem; }
+    .hero .subtitle { font-size: 1.15rem; color: #93c5fd; margin-bottom: 0.5rem; font-weight: 600; }
+    .hero .location { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 2rem; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 2.5rem; }
+    .hero-badge { background: rgba(255,255,255,0.12); color: #e0f2fe; padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .btn-primary { background: var(--accent); color: var(--navy); font-weight: 700; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(0,170,255,0.4); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,170,255,0.5); }
+    .btn-secondary { background: transparent; color: white; font-weight: 600; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1rem; border: 2px solid rgba(255,255,255,0.4); transition: border-color 0.2s, background 0.2s; }
+    .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.08); }
+    .stats-bar { background: var(--navy); color: white; display: flex; justify-content: center; flex-wrap: wrap; }
+    .stat { padding: 1.5rem 3rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.1); }
+    .stat:last-child { border-right: none; }
+    .stat-number { font-size: 2rem; font-weight: 900; color: var(--accent); }
+    .stat-label { font-size: 0.8rem; color: #93c5fd; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; }
+    h2 { font-size: clamp(1.6rem,3vw,2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 1rem; }
+    .section-divider { width: 50px; height: 4px; background: var(--accent); border-radius: 2px; margin-bottom: 2.5rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.5rem; }
+    .skill-card { background: var(--card-bg); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border); text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; }
+    .skill-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,85,165,0.12); }
+    .skill-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .skill-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+    .skill-card p { font-size: 0.82rem; color: var(--gray); }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 1.5rem; }
+    .project-card { background: var(--card-bg); border-radius: 14px; padding: 1.75rem; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,85,165,0.15); }
+    .project-tag { display: inline-block; background: #e0f2fe; color: var(--blue); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.7rem; border-radius: 999px; margin-bottom: 1rem; text-transform: uppercase; }
+    .project-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+    .project-card p { font-size: 0.88rem; color: var(--gray); flex-grow: 1; margin-bottom: 1rem; }
+    .project-impact { background: linear-gradient(135deg,#e0f2fe,#f0f9ff); border-left: 3px solid var(--accent); padding: 0.6rem 0.9rem; border-radius: 0 8px 8px 0; font-size: 0.82rem; font-weight: 600; color: var(--navy); margin-bottom: 1rem; }
+    .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .stack-tag { background: #f1f5f9; color: #475569; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: 600; }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--accent), var(--navy)); }
+    .timeline-item { position: relative; margin-bottom: 3rem; padding-left: 1.5rem; }
+    .timeline-dot { position: absolute; left: -2.4rem; top: 0.3rem; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 3px solid var(--navy); box-shadow: 0 0 0 3px rgba(0,170,255,0.2); }
+    .timeline-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem; }
+    .timeline-company { font-size: 1.1rem; font-weight: 800; color: var(--navy); }
+    .timeline-date { font-size: 0.85rem; color: var(--gray); font-weight: 600; background: var(--light); padding: 0.2rem 0.7rem; border-radius: 999px; }
+    .timeline-role { font-size: 0.95rem; color: var(--blue); font-weight: 600; margin-bottom: 0.75rem; }
+    .timeline-item ul { padding-left: 1.2rem; }
+    .timeline-item ul li { font-size: 0.9rem; color: #374151; margin-bottom: 0.4rem; }
+    .award-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg,#fef3c7,#fffbeb); border: 1px solid #fcd34d; color: #92400e; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 700; margin-top: 1rem; }
+    .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 1rem; }
+    .cert-item { display: flex; align-items: flex-start; gap: 0.75rem; background: var(--card-bg); padding: 1rem 1.25rem; border-radius: 10px; border: 1px solid var(--border); font-size: 0.88rem; font-weight: 600; color: var(--dark); }
+    .cert-item::before { content: '✅'; font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .contact-section { background: linear-gradient(135deg, var(--navy), #005599); border-radius: 20px; padding: 3rem; text-align: center; color: white; }
+    .contact-section h2 { color: white; margin-bottom: 0.5rem; }
+    .contact-section p { color: #93c5fd; margin-bottom: 2rem; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .contact-btn { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 10px; font-weight: 600; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2); transition: background 0.2s, transform 0.2s; }
+    .contact-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+    footer { text-align: center; padding: 2rem; font-size: 0.85rem; background: var(--navy); color: #64748b; }
     @media (max-width: 768px) {
-      .experience-block, .download-btn, .contact-link {
-        width: 100%;
-        display: block;
-        text-align: center;
-        margin: 0.5rem 0;
-      }
-
-      ul.cert-list {
-        columns: 1;
-      }
+      nav ul { display: none; }
+      .stats-bar { flex-direction: column; }
+      .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .hero-ctas { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Helton Lima da Trindade</h1>
-    <p>Senior RAN Engineer | Integration, Optimization & Automation Specialist</p>
-  </header>
 
-  <section>
-    <h2>Professional Summary</h2>
-    <p>With over 10 years of international experience in mobile network engineering, I specialize in remote integration, performance optimization, and process automation across 2G/3G/4G/5G environments. I deliver robust and scalable technical solutions with a focus on quality, cost efficiency, and operational excellence.</p>
-  </section>
-
-  <section>
-    <h2>Technical Specializations</h2>
+  <nav>
+    <div class="logo">HLT ⚡</div>
     <ul>
-      <li>Remote RAN Site Integration (BTS/eNodeB/gNodeB)</li>
-      <li>Performance Optimization based on KPIs (CSFB, HOSR, CSSR, DCR)</li>
-      <li>Neighbour Planning and Handover Optimization (intra-RAT & inter-RAT)</li>
-      <li>Technical Process Automation (Access VBA, PowerShell, Python, QGIS, Power Automate)</li>
-      <li>Creation of MOPs and Work Instructions</li>
-      <li>Technical Reporting, Power BI Dashboards, SharePoint Boards</li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-content">
+      <svg width="160" height="160" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="border-radius:50%; display:block; margin:0 auto 1.5rem;">
+        <defs>
+          <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#0055a5"/><stop offset="100%" stop-color="#001f3f"/></radialGradient>
+          <filter id="glow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00aaff"/><stop offset="50%" stop-color="#0077cc"/><stop offset="100%" stop-color="#00aaff"/></linearGradient>
+          <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#003366"/><stop offset="100%" stop-color="#0055a5"/></linearGradient>
+          <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.05)"/></pattern>
+        </defs>
+        <rect width="400" height="400" rx="200" fill="url(#cardGrad)"/>
+        <rect width="400" height="400" rx="200" fill="url(#dots)"/>
+        <circle cx="370" cy="30" r="60" fill="none" stroke="rgba(0,170,255,0.15)" stroke-width="1.5"/>
+        <circle cx="370" cy="30" r="90" fill="none" stroke="rgba(0,170,255,0.08)" stroke-width="1"/>
+        <circle cx="30" cy="370" r="60" fill="none" stroke="rgba(0,170,255,0.1)" stroke-width="1.5"/>
+        <g transform="translate(28,28)" opacity="0.5">
+          <path d="M0 20 Q10 8 20 20" fill="none" stroke="#00aaff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M-6 26 Q10 4 26 26" fill="none" stroke="#00aaff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+          <circle cx="10" cy="22" r="2.5" fill="#00aaff"/>
+        </g>
+        <circle cx="200" cy="165" r="93" fill="none" stroke="rgba(0,170,255,0.2)" stroke-width="8"/>
+        <circle cx="200" cy="165" r="89" fill="none" stroke="url(#ringGrad)" stroke-width="3" filter="url(#glow)"/>
+        <circle cx="200" cy="165" r="85" fill="#001f3f"/>
+        <circle cx="200" cy="140" r="32" fill="#1a4a7a"/>
+        <ellipse cx="200" cy="220" rx="55" ry="35" fill="#1a4a7a"/>
+        <rect x="191" y="168" width="18" height="20" rx="4" fill="#1a4a7a"/>
+        <path d="M182 188 L200 205 L218 188" fill="none" stroke="#00aaff" stroke-width="2.5" stroke-linejoin="round" opacity="0.7"/>
+        <text x="200" y="155" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="44" fill="white" opacity="0.15">H</text>
+        <rect x="152" y="234" width="96" height="22" rx="11" fill="#00aaff" opacity="0.9"/>
+        <text x="200" y="249" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="9.5" fill="white" letter-spacing="0.5">● AVAILABLE TO HIRE</text>
+        <text x="200" y="305" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="19" fill="white">Helton Lima da Trindade</text>
+        <text x="200" y="328" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="12" fill="#93c5fd">Senior RAN Engineer · Nokia</text>
+      </svg>
+      <h1>Helton Lima da Trindade</h1>
+      <p class="subtitle">Senior RAN Engineer &amp; Automation Specialist</p>
+      <p class="location">📍 Lisbon, Portugal &nbsp;·&nbsp; Nokia Networks &nbsp;·&nbsp; 10+ Years Experience</p>
+      <div class="hero-badges">
+        <span class="hero-badge">2G / 3G / 4G / 5G</span>
+        <span class="hero-badge">Python Automation</span>
+        <span class="hero-badge">QGIS</span>
+        <span class="hero-badge">Nokia AirScale</span>
+        <span class="hero-badge">KPI Optimization</span>
+        <span class="hero-badge">CI/CD</span>
+        <span class="hero-badge">Power BI</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="cv_helton_lima.pdf" download class="btn-primary">📄 Download CV</a>
+        <a href="#contact" class="btn-secondary">💬 Hire Me</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-number">10+</div><div class="stat-label">Years Experience</div></div>
+    <div class="stat"><div class="stat-number">2,000+</div><div class="stat-label">Sites Integrated</div></div>
+    <div class="stat"><div class="stat-number">5</div><div class="stat-label">Automation Suites</div></div>
+    <div class="stat"><div class="stat-number">10</div><div class="stat-label">Certifications</div></div>
+    <div class="stat"><div class="stat-number">3</div><div class="stat-label">Languages</div></div>
+  </div>
+
+  <section id="about">
+    <p class="section-label">About Me</p>
+    <h2>What I Bring to Your Team</h2>
+    <div class="section-divider"></div>
+    <p style="max-width:700px;color:#374151;margin-bottom:2.5rem;font-size:1rem;">
+      I specialize in turning complex telecom operations into streamlined, automated workflows. From integrating 2,000+ RAN sites to building Python automation suites that replace days of manual work — I deliver measurable results with precision and speed.
+    </p>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-icon">📡</div><h3>RAN Integration</h3><p>BTS / eNodeB / gNodeB remote commissioning across multi-vendor environments</p></div>
+      <div class="skill-card"><div class="skill-icon">📊</div><h3>KPI Optimization</h3><p>CSFB, HOSR, CSSR, DCR — root-cause analysis and corrective tuning</p></div>
+      <div class="skill-card"><div class="skill-icon">🤖</div><h3>Process Automation</h3><p>Python, VBA, Power Automate — eliminating manual reporting and workflows</p></div>
+      <div class="skill-card"><div class="skill-icon">🗺️</div><h3>Geospatial Analysis</h3><p>QGIS-based neighbour audits, coverage analysis, and site planning</p></div>
+      <div class="skill-card"><div class="skill-icon">🔧</div><h3>Nokia Ecosystem</h3><p>NetAct, AirScale, Site Manager, EdenNet — deep platform expertise</p></div>
+      <div class="skill-card"><div class="skill-icon">📈</div><h3>Reporting &amp; BI</h3><p>Power BI dashboards, automated KPI reports, SharePoint boards</p></div>
+    </div>
   </section>
 
-  <section>
-    <h2>Technological Expertise</h2>
-    <p><strong>Vendors:</strong> Nokia (AirScale, Flexi BTS, NetAct, Site Manager)<br>
-       <strong>Tools:</strong> NetAct, EdenNet, QGIS, Excel VBA, Power BI, Power Automate, Access<br>
-       <strong>Protocols:</strong> S1/X2/NG, IuB, Xn, OSPF, BGP, L2VPN/L3VPN<br>
-       <strong>Transport:</strong> DWDM, IPRAN, NGN, MSAN, CSR 7705 SAR Router<br>
-       <strong>Technologies:</strong> GSM, UMTS, LTE, 5G NR (NSA & SA)</p>
-  </section>
-
-  <section>
-    <h2>Lifecycle Services</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Phase</th>
-          <th>Service Provided</th>
-          <th>OSI Layer</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>RF Planning & Validation</td><td>Network Design Audits, Neighbour Planning</td><td>Layer 1 / 3</td></tr>
-        <tr><td>Commissioning & Integration</td><td>Remote BTS/eNB/gNB Integration, Validation</td><td>Layer 1 / 2</td></tr>
-        <tr><td>Performance Optimization</td><td>KPI Tuning, Neighbour Audits, Interference Mitigation</td><td>Layer 2 / 3</td></tr>
-        <tr><td>Monitoring & QA</td><td>Automated Reports, Benchmarking, Root-Cause Analysis</td><td>Layer 2 / 3 / 7</td></tr>
-        <tr><td>Site Acceptance</td><td>SAT/PAT Support, Documentation</td><td>Layer 1 / 3 / 7</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Certifications</h2>
-    <ul class="cert-list">
-      <li>5G Radio Site Cluster Optimization (NCSS NPS)</li>
-      <li>5G Radio Optimisation – Expert</li>
-      <li>NCSA 5G Solution</li>
-      <li>GS Deploy – Microwave Wavence Services and Solutions</li>
-      <li>ESD & Calibration Awareness</li>
-      <li>L2 - I Own Digital (Nokia)</li>
-      <li>L1 - Data Analyst & Data Engineer (Nokia)</li>
-      <li>L1 - Scrum Master (Agile Nokia Program)</li>
-      <li>CCP – IEFP Portugal</li>
-      <li>Digital Trainer – Technical Training in Digital & Telecom</li>
-    </ul>
+  <section id="projects" style="background:#f8fafc;max-width:100%;padding:5rem 2rem;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <p class="section-label">Automation Portfolio</p>
+      <h2>Projects That Delivered Real Impact</h2>
+      <div class="section-divider"></div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <span class="project-tag">Reporting Automation</span>
+          <h3>Automated Email Reporting Suite</h3>
+          <p>End-to-end automation of Nokia MWINGZ NPO 48H performance reports — from data extraction to formatted email delivery.</p>
+          <div class="project-impact">⚡ Reduced report production from ~4 hours to under 10 minutes</div>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">SMTP</span><span class="stack-tag">Excel</span><span class="stack-tag">GitHub Actions</span></div>
+        </div>
+        <div class="project-card">
+          <span class="project-tag">Geospatial Automation</span>
+          <h3>RAN NPO ToolBox</h3>
+          <p>QGIS-based MultiRat Neighbour Audit toolkit for automated detection of missing, redundant, and misaligned neighbour relations.</p>
+          <div class="project-impact">📍 Audits that took days now run in minutes across full clusters</div>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">QGIS</span><span class="stack-tag">PyQGIS</span><span class="stack-tag">GeoPandas</span></div>
+        </div>
+        <div class="project-card">
+          <span class="project-tag">Integration Automation</span>
+          <h3>X-Sector Automation Suite</h3>
+          <p>Automated X-sector site configuration, validation, and commissioning workflows — reducing engineer touchpoints on bulk rollouts.</p>
+          <div class="project-impact">🔧 Supports parallel processing of multi-sector site batches</div>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">Nokia NetAct</span><span class="stack-tag">SSH</span><span class="stack-tag">Pandas</span></div>
+        </div>
+        <div class="project-card">
+          <span class="project-tag">Data Processing</span>
+          <h3>Combined Huawei Dumps</h3>
+          <p>Automated parsing, merging, and analysis of large-scale Huawei configuration dumps to support SWAP migration audits.</p>
+          <div class="project-impact">📊 Processes thousands of records across legacy vendor exports</div>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">Regex</span><span class="stack-tag">Excel</span></div>
+        </div>
+        <div class="project-card">
+          <span class="project-tag">QGIS Headless</span>
+          <h3>QGIS Automation Suite</h3>
+          <p>Headless QGIS scripting toolkit for running geospatial analysis pipelines without a GUI — ideal for CI/CD integration.</p>
+          <div class="project-impact">🗺️ Enables server-side geospatial processing at scale</div>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">QGIS</span><span class="stack-tag">Docker</span><span class="stack-tag">CI/CD</span></div>
+        </div>
+        <div class="project-card">
+          <span class="project-tag">Project Template</span>
+          <h3>ProjectBase — Nokia SPA Template</h3>
+          <p>Standardized Nokia automation project scaffold with governance, CI/CD quality gates, and delivery metrics built in from day one.</p>
+          <div class="project-impact">🚀 Cuts new project bootstrap time from days to hours</div>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">SDLC</span><span class="stack-tag">Markdown</span></div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="experience">
+    <p class="section-label">Career</p>
     <h2>Professional Experience</h2>
-
-    <div class="experience-block">
-      <div class="exp-header">
-        <h3>NOKIA Networks</h3>
-        <span class="exp-location">Lisbon, Portugal</span>
-        <span class="exp-date">Apr 2022 – Present</span>
+    <div class="section-divider"></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <span class="timeline-company">Nokia Networks</span>
+          <span class="timeline-date">Apr 2022 – Present</span>
+        </div>
+        <div class="timeline-role">RAN Performance &amp; Optimization Specialist · Lisbon, Portugal</div>
+        <ul>
+          <li>Delivered KPI-driven performance reports to customer technical teams on SWAP 2G/3G/4G project</li>
+          <li>Performed regular network audits, root-cause analysis, and corrective action design</li>
+          <li>Built innovative automation solutions that significantly increased project efficiency</li>
+          <li>Supported strategic network decisions via insights, dashboards, and reporting</li>
+        </ul>
+        <div class="award-badge">🎖 Excellence in Commitment Award — MWingz Project (2023)</div>
       </div>
-      <h4>RAN Performance & Optimization Specialist</h4>
-      <p class="exp-project">Project: SWAP 2G/3G/4G</p>
-
-      <h5>Responsibilities</h5>
-      <ul>
-        <li>Presented KPI-driven performance reports to customer technical teams.</li>
-        <li>Performed regular network audits and root-cause analysis.</li>
-        <li>Designed corrective actions to improve performance and reliability.</li>
-        <li>Collaborated with cross-functional teams and monitored solution impact.</li>
-      </ul>
-
-      <h5>Key Achievements</h5>
-      <ul>
-        <li>🏆 Delivered innovative automation solutions increasing project efficiency.</li>
-        <li>🤝 Strengthened customer trust through technical excellence and responsiveness.</li>
-        <li>📈 Supported strategic network decisions via insights and reporting.</li>
-      </ul>
-
-      <p class="exp-award"><strong>🎖 Award:</strong> <em>Excellence in Commitment – MWingz Project (2023)</em></p>
-    </div>
-
-    <div class="experience-block">
-      <div class="exp-header">
-        <h3>NOKIA Networks</h3>
-        <span class="exp-location">Lisbon, Portugal</span>
-        <span class="exp-date">Feb 2016 – Mar 2022</span>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <span class="timeline-company">Nokia Networks</span>
+          <span class="timeline-date">Feb 2016 – Mar 2022</span>
+        </div>
+        <div class="timeline-role">RAN Integration &amp; Commissioning Engineer · Lisbon, Portugal</div>
+        <ul>
+          <li>Led integration of <strong>2,000+ Huawei sites</strong> during multi-vendor RAN modernization (MORAN &amp; MOCN)</li>
+          <li>Managed remote commissioning, sector expansions, and technology upgrades (2G/3G/4G/5G)</li>
+          <li>Executed SCF/RFDS configurations, test calls, and NOC handovers at scale</li>
+          <li>Collaborated across field, integration, and project management teams internationally</li>
+        </ul>
       </div>
-      <h4>RAN Integration & Commissioning Engineer</h4>
-      <p class="exp-project">Project: SWAP 2G/3G/4G/5G (MORAN & MOCN)</p>
-
-      <h5>Responsibilities</h5>
-      <ul>
-        <li>Led integration of 2,000+ Huawei sites during multi-vendor RAN modernization.</li>
-        <li>Managed remote commissioning, sector expansions, and upgrades.</li>
-        <li>Executed SCF/RFDS configurations, test calls, and NOC handovers.</li>
-      </ul>
-
-      <h5>Key Achievements</h5>
-      <ul>
-        <li>🔧 Delivered technical leadership in complex rollout environments.</li>
-        <li>⚙️ Enabled smooth collaboration across field and integration teams.</li>
-        <li>📊 Ensured delivery within timelines and optimized deployment workflows.</li>
-      </ul>
-    </div>
-
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="cv_helton_lima.pdf" download class="download-btn">📄 Download My CV (PDF)</a>
     </div>
   </section>
 
-  <section>
-    <h2>Languages</h2>
-    <ul>
-      <li>Portuguese – Native</li>
-      <li>English – Fluent</li>
-      <li>Spanish – Advanced</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Freelance/Consulting Services</h2>
-    <table>
-      <thead>
-        <tr><th>Phase</th><th>Services Offered</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>RF Planning & Validation</td><td>Network Design Audits, Neighbour Planning, Site Architecture Validation</td></tr>
-        <tr><td>Commissioning & Integration</td><td>Remote Integration, Initial Validation, First-Line Troubleshooting</td></tr>
-        <tr><td>Performance Optimization</td><td>KPI Analysis, Cluster Neighbour Audits, Interference Mitigation</td></tr>
-        <tr><td>Monitoring & Quality</td><td>Automated KPI Reports, Quality Benchmarking</td></tr>
-        <tr><td>Technical & Commercial Acceptance</td><td>SAT/PAT Support, Final Technical Reports</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Career Objectives</h2>
-    <p>To advance into roles such as RAN Architect, Technical Team Lead, or Operations Manager, combining deep technical knowledge with strategic process transformation and leadership capabilities.</p>
-  </section>
-
-  <footer style="margin-top: 4rem; text-align: center;">
-    <h2>Let's Connect</h2>
-    <p>I'm available for freelance projects, technical consulting, and remote RAN engagements.</p>
-    <div style="margin-top: 1rem;">
-      <a href="https://www.linkedin.com/in/heltonlimatrindade" target="_blank" class="contact-link">🔗 LinkedIn</a>
-      <a href="https://wa.me/351962462317" target="_blank" class="contact-link">💬 WhatsApp</a>
-      <a href="https://github.com/heltonlimatrindade" target="_blank" class="contact-link">💻 GitHub</a>
-      <a href="mailto:heltonlimatrindade@gmail.com" class="contact-link">✉️ Email</a>
+  <section id="certifications" style="background:#f8fafc;max-width:100%;padding:5rem 2rem;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <p class="section-label">Credentials</p>
+      <h2>Certifications</h2>
+      <div class="section-divider"></div>
+      <div class="certs-grid">
+        <div class="cert-item">5G Radio Site Cluster Optimization (NCSS NPS)</div>
+        <div class="cert-item">5G Radio Optimisation – Expert</div>
+        <div class="cert-item">NCSA 5G Solution</div>
+        <div class="cert-item">GS Deploy – Microwave Wavence Services</div>
+        <div class="cert-item">ESD &amp; Calibration Awareness</div>
+        <div class="cert-item">L2 – I Own Digital (Nokia)</div>
+        <div class="cert-item">L1 – Data Analyst &amp; Data Engineer (Nokia)</div>
+        <div class="cert-item">L1 – Scrum Master (Agile Nokia Program)</div>
+        <div class="cert-item">CCP – IEFP Portugal</div>
+        <div class="cert-item">Digital Trainer – Technical Training in Digital &amp; Telecom</div>
+      </div>
     </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-section">
+      <p class="section-label" style="color:#7dd3fc;">Get In Touch</p>
+      <h2>Available for New Opportunities</h2>
+      <p>Open to freelance projects, technical consulting, and senior remote RAN engagements worldwide.</p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/heltonlimatrindade" target="_blank" class="contact-btn">🔗 LinkedIn</a>
+        <a href="https://wa.me/351962462317" target="_blank" class="contact-btn">💬 WhatsApp</a>
+        <a href="https://github.com/heltonlimatrindade" target="_blank" class="contact-btn">💻 GitHub</a>
+        <a href="mailto:heltonlimatrindade@gmail.com" class="contact-btn">✉️ Email</a>
+        <a href="cv_helton_lima.pdf" download class="contact-btn">📄 Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Helton Lima da Trindade · Senior RAN Engineer · Lisbon, Portugal</p>
   </footer>
+
 </body>
 </html>
