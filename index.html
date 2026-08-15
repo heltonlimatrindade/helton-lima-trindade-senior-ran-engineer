@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Helton Lima da Trindade | Senior RAN &amp; Telecom Automation Engineer</title>
-  <meta name="description" content="Senior RAN Engineer &amp; Telecom Automation Specialist. 10+ years optimizing 2G/3G/4G/5G mobile networks, building Python automation suites, and scaling geospatial intelligence." />
+  <title>Helton Lima da Trindade | Senior RAN NPO Engineer &amp; Telecom Automation Architect</title>
+  <meta name="description" content="Senior RAN NPO Engineer & Telecom Automation Specialist. 10+ years specializing in 2G/3G/4G/5G Radio Network Planning & Optimization, Multi-RAT KPI tuning, and custom Python automation suites." />
   
-  <!-- Modern Typography -->
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
     :root {
       --bg-primary: #050811;
       --bg-secondary: #0a0f1d;
-      --bg-card: rgba(13, 20, 36, 0.7);
-      --bg-card-hover: rgba(19, 30, 54, 0.85);
+      --bg-card: rgba(13, 20, 36, 0.75);
+      --bg-card-hover: rgba(19, 30, 54, 0.9);
       --border-subtle: rgba(56, 189, 248, 0.12);
       --border-glow: rgba(56, 189, 248, 0.4);
       --cyan: #00f0ff;
@@ -25,6 +25,8 @@
       --indigo: #6366f1;
       --emerald: #10b981;
       --amber: #f59e0b;
+      --npo-accent: #38bdf8;
+      --auto-accent: #00f0ff;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
@@ -49,20 +51,20 @@
       height: 100vh;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.6;
+      opacity: 0.55;
     }
 
     /* Ambient Lighting */
     .glow-orb {
       position: absolute;
       border-radius: 50%;
-      filter: blur(120px);
+      filter: blur(130px);
       pointer-events: none;
       z-index: 0;
     }
-    .orb-1 { top: 5%; left: 15%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 70%); }
-    .orb-2 { top: 40%; right: 10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(99, 102, 241, 0.07) 0%, transparent 70%); }
-    .orb-3 { bottom: 10%; left: 20%; width: 550px; height: 550px; background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%); }
+    .orb-1 { top: 5%; left: 10%; width: 550px; height: 550px; background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 70%); }
+    .orb-2 { top: 35%; right: 5%; width: 650px; height: 650px; background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%); }
+    .orb-3 { top: 65%; left: 15%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%); }
 
     /* Navigation Bar */
     nav {
@@ -75,9 +77,9 @@
       transition: all 0.3s ease;
     }
     nav.scrolled {
-      background: rgba(5, 8, 17, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(5, 8, 17, 0.9);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--border-subtle);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     }
@@ -96,7 +98,7 @@
       text-decoration: none;
       color: var(--text-main);
       font-weight: 800;
-      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      font-size: clamp(0.9rem, 2vw, 1.15rem);
       letter-spacing: -0.3px;
       white-space: nowrap;
     }
@@ -118,13 +120,13 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 1.75rem;
       list-style: none;
     }
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       transition: all 0.2s ease;
       position: relative;
@@ -178,7 +180,7 @@
       padding: 8rem 1.5rem 5rem;
     }
     .hero-container {
-      max-width: 1140px;
+      max-width: 1180px;
       margin: 0 auto;
       text-align: center;
       position: relative;
@@ -194,7 +196,7 @@
       font-size: 0.8rem;
       font-weight: 600;
       color: #34d399;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
       letter-spacing: 0.5px;
       text-transform: uppercase;
       font-family: 'JetBrains Mono', monospace;
@@ -214,10 +216,10 @@
     }
 
     .hero-title {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-size: clamp(2.4rem, 5.5vw, 4.4rem);
       font-weight: 900;
       letter-spacing: -1.5px;
-      line-height: 1.08;
+      line-height: 1.1;
       margin-bottom: 1.25rem;
     }
     .text-gradient {
@@ -225,19 +227,38 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .hero-subtitle {
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-      color: var(--sky);
-      font-weight: 600;
-      margin-bottom: 1rem;
-      letter-spacing: -0.2px;
+    .dual-pillar-tagline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
     }
+    .pillar-tag-npo {
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 0.25rem 0.85rem;
+      border-radius: 6px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .pillar-tag-auto {
+      color: #00f0ff;
+      background: rgba(0, 240, 255, 0.1);
+      padding: 0.25rem 0.85rem;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 240, 255, 0.3);
+    }
+    .pillar-divider { color: var(--text-dim); }
+
     .hero-description {
-      max-width: 780px;
+      max-width: 860px;
       margin: 0 auto 2.5rem;
       font-size: 1.05rem;
       color: var(--text-muted);
-      line-height: 1.7;
+      line-height: 1.75;
     }
     .hero-chips {
       display: flex;
@@ -256,6 +277,14 @@
       font-weight: 600;
       font-family: 'JetBrains Mono', monospace;
       transition: all 0.2s ease;
+    }
+    .chip.npo-chip {
+      border-color: rgba(56, 189, 248, 0.3);
+      color: #bae6fd;
+    }
+    .chip.auto-chip {
+      border-color: rgba(0, 240, 255, 0.3);
+      color: #a5f3fc;
     }
     .chip:hover {
       border-color: var(--cyan);
@@ -315,18 +344,18 @@
     .telemetry-section {
       position: relative;
       z-index: 10;
-      max-width: 1200px;
+      max-width: 1240px;
       margin: -2rem auto 4rem;
       padding: 0 1.5rem;
     }
     .telemetry-grid {
-      background: rgba(10, 15, 29, 0.8);
+      background: rgba(10, 15, 29, 0.85);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--border-subtle);
       border-radius: 16px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       padding: 1.5rem;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
@@ -354,20 +383,19 @@
       letter-spacing: 1px;
     }
 
-    /* Global Section Container */
+    /* Global Section Containers */
     section {
       position: relative;
       z-index: 10;
       max-width: 1240px;
       margin: 0 auto;
-      padding: 6rem 1.5rem;
+      padding: 5.5rem 1.5rem;
     }
     .section-head {
       margin-bottom: 3.5rem;
     }
     .section-tag {
       font-family: 'JetBrains Mono', monospace;
-      color: var(--cyan);
       font-size: 0.85rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -377,9 +405,13 @@
       gap: 0.5rem;
       margin-bottom: 0.75rem;
     }
+    .tag-npo { color: #38bdf8; }
+    .tag-auto { color: #00f0ff; }
+    .tag-track { color: #10b981; }
+    .tag-certs { color: #fbbf24; }
+
     .section-tag::before {
       content: '//';
-      color: var(--sky);
     }
     .section-title {
       font-size: clamp(2rem, 4vw, 2.75rem);
@@ -391,7 +423,51 @@
     .section-desc {
       color: var(--text-muted);
       font-size: 1.05rem;
-      max-width: 650px;
+      max-width: 720px;
+      line-height: 1.7;
+    }
+
+    /* Dual Pillar Highlight Boxes */
+    .pillar-banner {
+      background: linear-gradient(135deg, rgba(14, 28, 54, 0.7), rgba(10, 18, 36, 0.9));
+      border: 1px solid var(--border-glow);
+      border-radius: 16px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .pillar-banner-content h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+    .pillar-banner-content p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 750px;
+    }
+    .pillar-badge-count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .count-npo {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38bdf8;
+    }
+    .count-auto {
+      background: rgba(0, 240, 255, 0.15);
+      border: 1px solid rgba(0, 240, 255, 0.35);
+      color: #00f0ff;
     }
 
     /* Glass Cards */
@@ -425,53 +501,48 @@
     }
     .glass-card:hover::before { opacity: 1; }
 
-    /* Skills Grid */
-    .skills-matrix {
+    /* NPO Grid */
+    .npo-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.75rem;
     }
-    .skill-icon-wrapper {
+    .npo-icon {
       width: 48px;
       height: 48px;
       border-radius: 12px;
-      background: rgba(0, 240, 255, 0.1);
-      border: 1px solid rgba(0, 240, 255, 0.2);
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
       margin-bottom: 1.25rem;
-      color: var(--cyan);
+      color: #38bdf8;
     }
-    .skill-card h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
+    .npo-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
       margin-bottom: 0.6rem;
       color: var(--text-main);
     }
-    .skill-card p {
+    .npo-card p {
       font-size: 0.92rem;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.65;
     }
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 1.25rem;
-    }
-    .mini-tag {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: #94a3b8;
-      font-size: 0.75rem;
+    .npo-metrics-box {
+      background: rgba(56, 189, 248, 0.06);
+      border-left: 3px solid #38bdf8;
+      padding: 0.75rem 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.85rem;
+      color: #e0f2fe;
+      margin: 1.25rem 0 1rem;
       font-family: 'JetBrains Mono', monospace;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
     }
 
-    /* Projects Grid */
+    /* Automation Projects Grid */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -552,7 +623,7 @@
       top: 10px;
       bottom: 10px;
       width: 2px;
-      background: linear-gradient(180deg, var(--cyan), var(--blue), transparent);
+      background: linear-gradient(180deg, #38bdf8, var(--cyan), var(--blue), transparent);
     }
     .timeline-card {
       position: relative;
@@ -599,22 +670,23 @@
       font-weight: 600;
     }
     .role-title {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       color: var(--cyan);
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 1.25rem;
     }
     .timeline-points {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.85rem;
     }
     .timeline-points li {
       position: relative;
       padding-left: 1.5rem;
       color: var(--text-muted);
       font-size: 0.95rem;
+      line-height: 1.6;
     }
     .timeline-points li::before {
       content: '▹';
@@ -703,11 +775,7 @@
       display: flex;
       gap: 6px;
     }
-    .t-dot {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-    }
+    .t-dot { width: 11px; height: 11px; border-radius: 50%; }
     .t-red { background: #ef4444; }
     .t-yellow { background: #f59e0b; }
     .t-green { background: #10b981; }
@@ -728,7 +796,7 @@
     }
     .terminal-body p {
       color: var(--text-muted);
-      max-width: 620px;
+      max-width: 650px;
       margin: 0 auto 2.5rem;
       font-size: 1.05rem;
     }
@@ -791,12 +859,12 @@
       font-family: 'JetBrains Mono', monospace;
     }
 
-    /* Mobile Responsive */
-    @media (max-width: 900px) {
+    /* Responsive */
+    @media (max-width: 960px) {
       .nav-links { display: none; }
       .telemetry-grid { grid-template-columns: 1fr 1fr; }
       .telemetry-card { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
-      .projects-grid { grid-template-columns: 1fr; }
+      .projects-grid, .npo-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 600px) {
       .telemetry-grid { grid-template-columns: 1fr; }
@@ -825,9 +893,8 @@
         <span>HELTON LIMA DA TRINDADE</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Telemetry &amp; Stack</a></li>
-        <li><a href="#projects">Engineering Suites</a></li>
+        <li><a href="#npo-core">NPO Engineering</a></li>
+        <li><a href="#automation-core">Telecom Automation</a></li>
         <li><a href="#experience">Track Record</a></li>
         <li><a href="#certifications">Certifications</a></li>
       </ul>
@@ -842,38 +909,40 @@
     <div class="hero-container">
       <div class="status-badge">
         <div class="pulse-dot"></div>
-        <span>5G ACTIVE // OPEN FOR GLOBAL ENGAGEMENTS</span>
+        <span>5G ACTIVE // OPEN FOR GLOBAL NPO &amp; AUTOMATION ROLES</span>
       </div>
 
       <h1 class="hero-title">
         Helton Lima <span class="text-gradient">da Trindade</span>
       </h1>
       
-      <p class="hero-subtitle">
-        Senior RAN Engineer &amp; Telecom Automation Specialist
-      </p>
+      <div class="dual-pillar-tagline">
+        <span class="pillar-tag-npo">📡 Senior RAN NPO Specialist</span>
+        <span class="pillar-divider">&amp;</span>
+        <span class="pillar-tag-auto">⚡ Telecom Automation Architect</span>
+      </div>
 
       <p class="hero-description">
-        Bridging high-scale wireless telecommunications and modern software engineering. Over a decade of proven expertise deploying 2,000+ multi-vendor sites, engineering Python automation ecosystems, and executing geospatial network intelligence.
+        A unique combination of <strong>over a decade in core Radio Network Planning &amp; Optimization (NPO)</strong> across 2G/3G/4G/5G mobile environments and <strong>full-stack Python automation engineering</strong>. Delivering end-to-end multi-RAT KPI tuning, deep root-cause troubleshooting, 2,000+ site modernizations, and bespoke software pipelines that accelerate telecom operations.
       </p>
 
       <div class="hero-chips">
-        <span class="chip">2G / 3G / 4G / 5G RAN</span>
-        <span class="chip">Python Automation</span>
-        <span class="chip">QGIS Headless</span>
-        <span class="chip">Nokia AirScale / NetAct</span>
-        <span class="chip">KPI Tuning</span>
-        <span class="chip">CI/CD Orchestration</span>
-        <span class="chip">Cloud-Native Tooling</span>
+        <span class="chip npo-chip">📡 2G / 3G / 4G / 5G NPO</span>
+        <span class="chip npo-chip">📊 CSFB / HOSR / CSSR / DCR KPI Tuning</span>
+        <span class="chip npo-chip">🔧 Nokia AirScale &amp; NetAct</span>
+        <span class="chip npo-chip">🗺️ Multi-RAT Cluster Audits</span>
+        <span class="chip auto-chip">⚡ Python 3.12 Automation</span>
+        <span class="chip auto-chip">🛰️ QGIS Headless &amp; PyQGIS</span>
+        <span class="chip auto-chip">🔄 GitHub Actions CI/CD</span>
       </div>
 
       <div class="hero-buttons">
-        <a href="#projects" class="btn-main">
-          <span>🚀 Explore Architecture</span>
+        <a href="#npo-core" class="btn-main">
+          <span>📡 Explore NPO Track Record</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#contact" class="btn-glass">
-          <span>💬 Initiate Signal</span>
+        <a href="#automation-core" class="btn-glass">
+          <span>⚡ View Automation Toolkits</span>
         </a>
       </div>
     </div>
@@ -883,100 +952,163 @@
   <div class="telemetry-section">
     <div class="telemetry-grid">
       <div class="telemetry-card">
-        <div class="telemetry-val" data-target="10">10+</div>
-        <div class="telemetry-lbl">Years International RAN</div>
+        <div class="telemetry-val">10+</div>
+        <div class="telemetry-lbl">Years International NPO / RAN</div>
       </div>
       <div class="telemetry-card">
-        <div class="telemetry-val" data-target="2000">2,000+</div>
-        <div class="telemetry-lbl">RAN Sites Modernized</div>
+        <div class="telemetry-val">2,000+</div>
+        <div class="telemetry-lbl">RAN Sites Modernized (MORAN/MOCN)</div>
       </div>
       <div class="telemetry-card">
-        <div class="telemetry-val" data-target="6">6+</div>
-        <div class="telemetry-lbl">Custom Automation Suites</div>
+        <div class="telemetry-val">48H</div>
+        <div class="telemetry-lbl">Executive NPO Reporting Cadence</div>
       </div>
       <div class="telemetry-card">
-        <div class="telemetry-val" data-target="10">10</div>
+        <div class="telemetry-val">6+</div>
+        <div class="telemetry-lbl">Custom Tooling Suites Built</div>
+      </div>
+      <div class="telemetry-card">
+        <div class="telemetry-val">10</div>
         <div class="telemetry-lbl">Industry Certifications</div>
       </div>
     </div>
   </div>
 
-  <!-- About & Tech Stack -->
-  <section id="about">
+  <!-- ======================================================== -->
+  <!-- PILLAR 1: RADIO NETWORK PLANNING & OPTIMIZATION (NPO)   -->
+  <!-- ======================================================== -->
+  <section id="npo-core">
     <div class="section-head">
-      <div class="section-tag">Core Competencies</div>
-      <h2 class="section-title">Engineered for Network Precision</h2>
-      <p class="section-desc">Replacing days of error-prone manual telecom operations with robust, scalable software architecture.</p>
+      <div class="section-tag tag-npo">Core Pillar 01</div>
+      <h2 class="section-title">Radio Network Planning &amp; Optimization (NPO)</h2>
+      <p class="section-desc">
+        Comprehensive radio engineering covering cluster-wide KPI governance, root-cause anomaly diagnostics, parameter harmonization, and multi-technology performance stabilization.
+      </p>
     </div>
 
-    <div class="skills-matrix" id="skills">
-      <div class="glass-card skill-card">
-        <div class="skill-icon-wrapper">📡</div>
-        <h3>RAN Architecture &amp; Integration</h3>
-        <p>Commissioning BTS, eNodeB, and gNodeB platforms across multi-vendor MORAN/MOCN rollouts. SCF/RFDS configurations, massive MIMO, and NOC cutovers.</p>
-        <div class="skill-tags">
-          <span class="mini-tag">Nokia AirScale</span>
-          <span class="mini-tag">Huawei SWAP</span>
-          <span class="mini-tag">5G NR</span>
-          <span class="mini-tag">NetAct</span>
+    <div class="pillar-banner">
+      <div class="pillar-banner-content">
+        <h3>📡 Telecom Domain Expertise: 2G · 3G · 4G LTE · 5G NR</h3>
+        <p>Proven leadership on Tier-1 operator programs (Nokia Networks, MWingz Project), executing radio audits, worst cell cleansing, and executive KPI reporting.</p>
+      </div>
+      <span class="pillar-badge-count count-npo">10+ Years Operational NPO</span>
+    </div>
+
+    <div class="npo-grid">
+      <!-- NPO Card 1 -->
+      <div class="glass-card npo-card">
+        <div class="npo-icon">📊</div>
+        <h3>Radio KPI Tuning &amp; Optimization</h3>
+        <p>Continuous monitoring, statistical analysis, and parameter tuning for critical radio KPIs to meet strict Tier-1 operator SLA thresholds.</p>
+        <div class="npo-metrics-box">CSSR · DCR · CSFB · HOSR · SINR · Throughput · Retainability</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">Nokia NetAct</span>
+          <span class="tech-pill">EdenNet</span>
+          <span class="tech-pill">Worst Cells Audit</span>
+          <span class="tech-pill">Traffic Balancing</span>
         </div>
       </div>
 
-      <div class="glass-card skill-card">
-        <div class="skill-icon-wrapper">⚡</div>
-        <h3>Telecom Software Automation</h3>
-        <p>Building production-grade Python toolkits for automated data parsing, cluster consistency auditing, and report generation pipelines.</p>
-        <div class="skill-tags">
-          <span class="mini-tag">Python 3.12</span>
-          <span class="mini-tag">Pandas</span>
-          <span class="mini-tag">Regex Parsers</span>
-          <span class="mini-tag">AsyncIO</span>
+      <!-- NPO Card 2 -->
+      <div class="glass-card npo-card">
+        <div class="npo-icon">🔍</div>
+        <h3>Root-Cause Analysis &amp; Troubleshooting</h3>
+        <p>Deep-dive investigations on degraded clusters: identifying external/internal interference (PIM), antenna cross-feeders, pilot pollution, and misconfigured handovers.</p>
+        <div class="npo-metrics-box">Interference Mitigation · PIM Detection · Neighbor Audits</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">Trace Analysis</span>
+          <span class="tech-pill">Alarm Corelation</span>
+          <span class="tech-pill">Tilt &amp; Azimuth</span>
+          <span class="tech-pill">Power Offsets</span>
         </div>
       </div>
 
-      <div class="glass-card skill-card">
-        <div class="skill-icon-wrapper">🗺️</div>
-        <h3>Geospatial NPO Intelligence</h3>
-        <p>Developing automated QGIS/PyQGIS plugins and headless Docker pipelines to audit multi-RAT neighbor relations and geographical anomalies.</p>
-        <div class="skill-tags">
-          <span class="mini-tag">QGIS / PyQGIS</span>
-          <span class="mini-tag">GeoPandas</span>
-          <span class="mini-tag">Neighbor Audits</span>
-          <span class="mini-tag">Shapefiles</span>
+      <!-- NPO Card 3 -->
+      <div class="glass-card npo-card">
+        <div class="npo-icon">📑</div>
+        <h3>48H Performance &amp; Executive Reporting</h3>
+        <p>Delivering high-cadence 48-hour NPO performance evaluation dossiers to customer technical directors on large-scale SWAP and modernization projects.</p>
+        <div class="npo-metrics-box">MWingz Project · Executive Dashboards · SLA Validation</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">Power BI</span>
+          <span class="tech-pill">SharePoint Boards</span>
+          <span class="tech-pill">Nokia NetAct</span>
+          <span class="tech-pill">Customer Review</span>
         </div>
       </div>
 
-      <div class="glass-card skill-card">
-        <div class="skill-icon-wrapper">📊</div>
-        <h3>KPI Tuning &amp; Optimization</h3>
-        <p>Root-cause diagnostics and corrective parameter tuning for CSFB, HOSR, CSSR, throughput degradation, and traffic load balancing.</p>
-        <div class="skill-tags">
-          <span class="mini-tag">Root-Cause Analysis</span>
-          <span class="mini-tag">EdenNet</span>
-          <span class="mini-tag">Power BI</span>
-          <span class="mini-tag">48H Reports</span>
+      <!-- NPO Card 4 -->
+      <div class="glass-card npo-card">
+        <div class="npo-icon">📡</div>
+        <h3>Multi-Vendor Integration &amp; SWAP</h3>
+        <p>End-to-end commissioning and integration oversight of over 2,000 Huawei to Nokia modernized sites under MORAN (Multi-Operator RAN) and MOCN architectures.</p>
+        <div class="npo-metrics-box">2,000+ Commissioned Sites · SCF/RFDS · Carrier Additions</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">AirScale</span>
+          <span class="tech-pill">Site Manager</span>
+          <span class="tech-pill">MORAN / MOCN</span>
+          <span class="tech-pill">5G NR Rollout</span>
+        </div>
+      </div>
+
+      <!-- NPO Card 5 -->
+      <div class="glass-card npo-card">
+        <div class="npo-icon">🗺️</div>
+        <h3>Frequency &amp; Spectrum Engineering</h3>
+        <p>Managing carrier frequency inventories, spectrum refarming strategies (900/1800/2100/2600/3500 MHz), and neighbor relation matrices across Multi-RAT topologies.</p>
+        <div class="npo-metrics-box">Spectrum Refarming · Layer Strategy · PCI/RSI Planning</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">Frequency Plan</span>
+          <span class="tech-pill">PCI Conflict Check</span>
+          <span class="tech-pill">Handover Matrix</span>
+        </div>
+      </div>
+
+      <!-- NPO Card 6 -->
+      <div class="glass-card npo-card">
+        <div class="npo-icon">🛡️</div>
+        <h3>QGIS Multi-RAT Geospatial Auditing</h3>
+        <p>Spatial analysis of radio clusters to identify missing neighbor relationships, inverted sector orientations, coverage holes, and co-channel overshooters.</p>
+        <div class="npo-metrics-box">Geographical Polygons · MultiRAT Overlap · Azimuth Verification</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">QGIS</span>
+          <span class="tech-pill">PyQGIS</span>
+          <span class="tech-pill">Shapefiles</span>
+          <span class="tech-pill">Cluster Maps</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
+  <!-- ======================================================== -->
+  <!-- PILLAR 2: CUSTOM TELECOM AUTOMATION & SOFTWARE SUITES    -->
+  <!-- ======================================================== -->
+  <section id="automation-core" style="padding-top:2rem;">
     <div class="section-head">
-      <div class="section-tag">Flagship Deployments</div>
-      <h2 class="section-title">Production Tooling &amp; Automation</h2>
-      <p class="section-desc">Real-world automation platforms running inside telecom operations that save hundreds of engineering hours.</p>
+      <div class="section-tag tag-auto">Core Pillar 02</div>
+      <h2 class="section-title">Telecom Automation &amp; Software Engineering</h2>
+      <p class="section-desc">
+        Building custom algorithms, headless spatial pipelines, and automated reporting engines that eliminate manual engineering bottlenecks and ensure error-free deployments.
+      </p>
+    </div>
+
+    <div class="pillar-banner">
+      <div class="pillar-banner-content">
+        <h3>⚡ Software Stack: Python 3.12 · PyQGIS · Pandas · Docker · CI/CD</h3>
+        <p>Production suites running inside live telecom environments, replacing hours of repetitive manual data manipulation with automated execution.</p>
+      </div>
+      <span class="pillar-badge-count count-auto">6 Production Suites</span>
     </div>
 
     <div class="projects-grid">
-      <!-- Project 1 -->
+      <!-- Suite 1 -->
       <div class="glass-card project-card">
         <div class="project-meta">
           <span class="project-category">Reporting Ops</span>
           <span style="font-size:1.2rem;">⚡</span>
         </div>
         <h3 class="project-title">Automated Email Reporting Suite</h3>
-        <p class="project-text">End-to-end automated pipeline executing Nokia MWINGZ NPO 48H performance evaluations, merging complex telemetry, and delivering structured reports to executive stakeholders.</p>
+        <p class="project-text">End-to-end automated pipeline extracting Nokia MWINGZ NPO 48H performance data, validating KPIs, assembling visual executive summaries, and dispatching via SMTP.</p>
         <div class="impact-box">⚡ Reduced turnaround time from ~4 hours to under 10 minutes</div>
         <div class="tech-stack-row">
           <span class="tech-pill">Python</span>
@@ -986,7 +1118,7 @@
         </div>
       </div>
 
-      <!-- Project 2 -->
+      <!-- Suite 2 -->
       <div class="glass-card project-card">
         <div class="project-meta">
           <span class="project-category">Geospatial Intelligence</span>
@@ -1003,7 +1135,7 @@
         </div>
       </div>
 
-      <!-- Project 3 -->
+      <!-- Suite 3 -->
       <div class="glass-card project-card">
         <div class="project-meta">
           <span class="project-category">RAN Modernization</span>
@@ -1020,7 +1152,7 @@
         </div>
       </div>
 
-      <!-- Project 4 -->
+      <!-- Suite 4 -->
       <div class="glass-card project-card">
         <div class="project-meta">
           <span class="project-category">Data Engineering</span>
@@ -1036,7 +1168,7 @@
         </div>
       </div>
 
-      <!-- Project 5 -->
+      <!-- Suite 5 -->
       <div class="glass-card project-card">
         <div class="project-meta">
           <span class="project-category">Headless Pipelines</span>
@@ -1053,7 +1185,7 @@
         </div>
       </div>
 
-      <!-- Project 6 -->
+      <!-- Suite 6 -->
       <div class="glass-card project-card">
         <div class="project-meta">
           <span class="project-category">Architecture Standards</span>
@@ -1071,16 +1203,16 @@
     </div>
   </section>
 
-  <!-- Career Experience -->
+  <!-- Career Experience Track Record -->
   <section id="experience">
     <div class="section-head">
-      <div class="section-tag">Career Trajectory</div>
-      <h2 class="section-title">Proven Track Record</h2>
-      <p class="section-desc">Key leadership and execution milestones at Tier-1 telecom environments.</p>
+      <div class="section-tag tag-track">Career Trajectory</div>
+      <h2 class="section-title">Proven Engineering Track Record</h2>
+      <p class="section-desc">Key leadership and execution milestones across Tier-1 telecom operators and global network deployments.</p>
     </div>
 
     <div class="timeline-container">
-      <!-- Nokia Senior -->
+      <!-- Nokia Senior NPO -->
       <div class="timeline-card">
         <div class="timeline-node"></div>
         <div class="timeline-card-content glass-card">
@@ -1088,12 +1220,12 @@
             <h3 class="company-name">Nokia Networks</h3>
             <span class="timeline-badge">Apr 2022 – Present</span>
           </div>
-          <div class="role-title">RAN Performance &amp; Optimization Specialist · Lisbon, Portugal</div>
+          <div class="role-title">RAN Performance &amp; Optimization (NPO) Specialist · Lisbon, Portugal</div>
           <ul class="timeline-points">
-            <li>Spearheaded KPI-driven performance monitoring and root-cause analysis for major SWAP 2G/3G/4G programs.</li>
-            <li>Designed and maintained network audits, traffic redistribution plans, and parameter tuning strategies.</li>
-            <li>Architected custom Python automation ecosystems that eradicated repetitive reporting bottlenecks across engineering units.</li>
-            <li>Provided executive analytics, KPI forecast modeling, and data-driven guidance for senior management.</li>
+            <li><strong>Core NPO Leadership:</strong> Spearheaded KPI-driven performance monitoring, cluster parameter audits, and worst-cell root-cause remediation on the major SWAP 2G/3G/4G project.</li>
+            <li><strong>Executive Reporting Cadence:</strong> Delivered high-visibility 48-Hour NPO performance evaluation reports directly to customer technical directorships.</li>
+            <li><strong>Automation Engineering:</strong> Conceived, built, and maintained Python automation ecosystems that eliminated repetitive reporting and spatial data bottlenecks.</li>
+            <li><strong>Strategic Decision Support:</strong> Formulated network redistribution plans, frequency layer strategies, and capacity expansion recommendations.</li>
           </ul>
           <div class="award-card">
             <span>🎖️</span>
@@ -1102,7 +1234,7 @@
         </div>
       </div>
 
-      <!-- Nokia Engineer -->
+      <!-- Nokia Integration Engineer -->
       <div class="timeline-card">
         <div class="timeline-node"></div>
         <div class="timeline-card-content glass-card">
@@ -1112,10 +1244,10 @@
           </div>
           <div class="role-title">RAN Integration &amp; Commissioning Engineer · Lisbon, Portugal</div>
           <ul class="timeline-points">
-            <li>Directed remote integration and cutover of <strong>2,000+ multi-technology sites</strong> during massive multi-vendor MORAN &amp; MOCN modernizations.</li>
-            <li>Conducted end-to-end commissioning, sector re-alignments, SCF/RFDS scripts validation, and tech upgrades across 2G/3G/4G/5G.</li>
-            <li>Managed live verification call testing, alarm resolution, and strict SLA compliance for Tier-1 operator handovers.</li>
-            <li>Coordinated seamless rollouts across field operations, RF planning, and project management offices internationally.</li>
+            <li><strong>Massive Modernization:</strong> Directed remote integration and cutover of <strong>2,000+ multi-technology sites</strong> during massive Huawei-to-Nokia MORAN &amp; MOCN modernizations.</li>
+            <li><strong>Multi-RAT Commissioning:</strong> Executed end-to-end commissioning, sector expansions, SCF/RFDS scripts validation, and tech upgrades across 2G/3G/4G/5G.</li>
+            <li><strong>SLA &amp; Acceptance Testing:</strong> Supervised live verification test calls, alarm troubleshooting, and strict SLA compliance for operator handovers.</li>
+            <li><strong>Cross-Functional Alignment:</strong> Coordinated seamless rollouts connecting field operations, RF planning, and project management offices internationally.</li>
           </ul>
         </div>
       </div>
@@ -1125,9 +1257,9 @@
   <!-- Certifications -->
   <section id="certifications">
     <div class="section-head">
-      <div class="section-tag">Continuous Mastery</div>
+      <div class="section-tag tag-certs">Continuous Mastery</div>
       <h2 class="section-title">Certifications &amp; Accreditations</h2>
-      <p class="section-desc">Certified in bleeding-edge 5G radio optimization, agile delivery, and modern data engineering.</p>
+      <p class="section-desc">Certified in bleeding-edge 5G radio optimization, microwave transport, agile delivery, and data engineering.</p>
     </div>
 
     <div class="certs-matrix">
@@ -1213,13 +1345,13 @@
           <div class="t-dot t-yellow"></div>
           <div class="t-dot t-green"></div>
         </div>
-        <div class="terminal-title">hlt@ran-telecom-station:~</div>
-        <div style="font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:#34d399;">● READY</div>
+        <div class="terminal-title">hlt@ran-npo-station:~</div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:#34d399;">● READY FOR NPO &amp; AUTOMATION</div>
       </div>
       <div class="terminal-body">
         <div class="section-tag" style="color:var(--cyan); margin-bottom:1rem;">Establish Connection</div>
-        <h2>Let's Build Autonomous Networks</h2>
-        <p>Available for senior RAN architecture, full-scale automation consulting, and high-impact telecommunication engineering worldwide.</p>
+        <h2>Let's Optimize &amp; Automate Your Network</h2>
+        <p>Available for senior RAN NPO roles, radio optimization consulting, bespoke telecom software engineering, and high-impact international missions.</p>
         
         <div class="connect-grid">
           <a href="https://www.linkedin.com/in/heltonlimatrindade" target="_blank" rel="noopener noreferrer" class="connect-btn">
@@ -1252,7 +1384,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 Helton Lima da Trindade · Senior RAN &amp; Automation Architecture · Lisbon, Portugal</p>
+    <p>© 2026 Helton Lima da Trindade · Senior RAN NPO Engineering &amp; Automation Architecture · Lisbon, Portugal</p>
   </footer>
 
   <!-- Interactive 5G Mesh Canvas and HUD Logic -->
