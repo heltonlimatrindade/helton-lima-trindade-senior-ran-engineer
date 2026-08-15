@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>Helton Lima da Trindade | Senior RAN NPO Engineer &amp; Telecom Automation Architect</title>
-  <meta name="description" content="Senior RAN NPO Engineer & Telecom Automation Specialist. 10+ years specializing in 2G/3G/4G/5G Radio Network Planning & Optimization, Multi-RAT KPI tuning, and custom Python automation suites." />
+  <title>Helton Lima da Trindade | Senior RAN NPO Specialist &amp; Telecom Automation Engineer</title>
+  <meta name="description" content="Senior telecommunications professional combining 10+ years of Radio Access Network Planning and Optimization (NPO) experience across 2G/3G/4G/5G with advanced Python automation and geospatial engineering." />
   
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,10 +15,10 @@
     :root {
       --bg-primary: #050811;
       --bg-secondary: #0a0f1d;
-      --bg-card: rgba(13, 20, 36, 0.78);
-      --bg-card-hover: rgba(19, 30, 54, 0.92);
+      --bg-card: rgba(13, 20, 36, 0.8);
+      --bg-card-hover: rgba(19, 30, 54, 0.94);
       --border-subtle: rgba(56, 189, 248, 0.12);
-      --border-glow: rgba(56, 189, 248, 0.4);
+      --border-glow: rgba(56, 189, 248, 0.35);
       --cyan: #00f0ff;
       --sky: #38bdf8;
       --blue: #2563eb;
@@ -81,7 +81,7 @@
     .orb-3 { top: 70%; left: 10%; width: 450px; height: 450px; background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%); }
 
     /* ======================================================== */
-    /* FIXED TOP NAVIGATION BAR WITH HEADER ICONS              */
+    /* FIXED TOP NAVIGATION BAR                                */
     /* ======================================================== */
     nav {
       position: fixed;
@@ -394,7 +394,7 @@
     }
 
     .hero-title {
-      font-size: clamp(2rem, 5.5vw, 4.3rem);
+      font-size: clamp(2.1rem, 5.5vw, 4.3rem);
       font-weight: 900;
       letter-spacing: -1.5px;
       line-height: 1.1;
@@ -412,9 +412,9 @@
       justify-content: center;
       align-items: center;
       gap: 0.5rem;
-      font-size: clamp(0.9rem, 2.2vw, 1.3rem);
+      font-size: clamp(0.92rem, 2.2vw, 1.3rem);
       font-weight: 700;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.35rem;
     }
     .pillar-tag-npo {
       color: #38bdf8;
@@ -433,11 +433,27 @@
     .pillar-divider { color: var(--text-dim); }
 
     .hero-description {
-      max-width: 840px;
+      max-width: 860px;
       margin: 0 auto 2.25rem;
       font-size: clamp(0.92rem, 2vw, 1.05rem);
       color: var(--text-muted);
       line-height: 1.75;
+    }
+    .hero-description p {
+      margin-bottom: 0.75rem;
+    }
+    .hero-description p:last-child {
+      margin-bottom: 0;
+    }
+
+    .hero-chips-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.75rem;
     }
     .hero-chips {
       display: flex;
@@ -456,14 +472,6 @@
       font-weight: 600;
       font-family: 'JetBrains Mono', monospace;
       transition: all 0.2s ease;
-    }
-    .chip.npo-chip {
-      border-color: rgba(56, 189, 248, 0.3);
-      color: #bae6fd;
-    }
-    .chip.auto-chip {
-      border-color: rgba(0, 240, 255, 0.3);
-      color: #a5f3fc;
     }
     .chip:hover {
       border-color: var(--cyan);
@@ -605,7 +613,7 @@
     .section-desc {
       color: var(--text-muted);
       font-size: clamp(0.92rem, 1.8vw, 1.05rem);
-      max-width: 720px;
+      max-width: 760px;
       line-height: 1.7;
     }
 
@@ -686,8 +694,8 @@
     /* NPO & Projects Grid */
     .npo-grid, .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.35rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
     }
     .npo-icon {
       width: 44px;
@@ -713,16 +721,36 @@
       color: var(--text-muted);
       line-height: 1.65;
     }
-    .npo-metrics-box {
-      background: rgba(56, 189, 248, 0.06);
-      border-left: 3px solid #38bdf8;
-      padding: 0.65rem 0.85rem;
-      border-radius: 0 8px 8px 0;
-      font-size: 0.8rem;
-      color: #e0f2fe;
-      margin: 1.15rem 0 0.85rem;
+
+    .card-subsection {
+      margin-top: 1rem;
+    }
+    .card-subhead {
+      font-size: 0.76rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--sky);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.35rem;
+    }
+    .card-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+    }
+    .card-list-item {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      color: #cbd5e1;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
       font-family: 'JetBrains Mono', monospace;
     }
+
     .project-card {
       display: flex;
       flex-direction: column;
@@ -746,7 +774,7 @@
       text-transform: uppercase;
     }
     .project-text {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.15rem;
       flex-grow: 1;
     }
     .impact-box {
@@ -818,7 +846,7 @@
       margin-bottom: 0.4rem;
     }
     .company-name {
-      font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
       font-weight: 800;
       color: var(--text-main);
     }
@@ -833,7 +861,7 @@
       font-weight: 600;
     }
     .role-title {
-      font-size: 0.98rem;
+      font-size: 1rem;
       color: var(--cyan);
       font-weight: 700;
       margin-bottom: 1.15rem;
@@ -956,10 +984,29 @@
     }
     .terminal-body p {
       color: var(--text-muted);
-      max-width: 650px;
-      margin: 0 auto 2.25rem;
+      max-width: 720px;
+      margin: 0 auto 1.5rem;
       font-size: 0.95rem;
+      line-height: 1.7;
     }
+    .interest-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      max-width: 750px;
+      margin: 0 auto 2.25rem;
+    }
+    .interest-tag {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: #cbd5e1;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
     .connect-grid {
       display: flex;
       flex-wrap: wrap;
@@ -1079,9 +1126,9 @@
     <ul class="mobile-nav-links">
       <li><a href="#npo-core" onclick="toggleMenu()"><span>📡</span> NPO Engineering</a></li>
       <li><a href="#automation-core" onclick="toggleMenu()"><span>⚡</span> Telecom Automation</a></li>
-      <li><a href="#experience" onclick="toggleMenu()"><span>🏛️</span> Track Record</a></li>
+      <li><a href="#experience" onclick="toggleMenu()"><span>🏛️</span> Professional Experience</a></li>
       <li><a href="#certifications" onclick="toggleMenu()"><span>🎓</span> Certifications</a></li>
-      <li><a href="#contact" onclick="toggleMenu()"><span>💬</span> Direct Connect</a></li>
+      <li><a href="#contact" onclick="toggleMenu()"><span>💬</span> Contact</a></li>
     </ul>
     <div class="mobile-contact-group">
       <a href="https://wa.me/351962462317" target="_blank" rel="noopener noreferrer" class="connect-btn" style="width:100%; justify-content:center; border-color:rgba(37,211,102,0.4); color:#25D366;">
@@ -1107,14 +1154,14 @@
       <ul class="nav-links">
         <li><a href="#npo-core">NPO Engineering</a></li>
         <li><a href="#automation-core">Telecom Automation</a></li>
-        <li><a href="#experience">Track Record</a></li>
+        <li><a href="#experience">Professional Experience</a></li>
         <li><a href="#certifications">Certifications</a></li>
       </ul>
 
       <!-- Action Icons (WhatsApp, LinkedIn, CTA, Hamburger) -->
       <div class="nav-actions">
         <!-- Direct WhatsApp Header Icon (Mobile & Desktop) -->
-        <a href="https://wa.me/351962462317" target="_blank" rel="noopener noreferrer" class="header-icon-btn whatsapp" aria-label="Direct WhatsApp Contact" title="WhatsApp Direct">
+        <a href="https://wa.me/351962462317" target="_blank" rel="noopener noreferrer" class="header-icon-btn whatsapp" aria-label="WhatsApp Direct" title="WhatsApp Direct">
           <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
         </a>
 
@@ -1125,7 +1172,7 @@
 
         <!-- Desktop CTA button -->
         <a href="#contact" class="nav-cta">
-          <span>⚡ Direct Connect</span>
+          <span>⚡ Contact</span>
         </a>
 
         <!-- Mobile Hamburger button -->
@@ -1143,7 +1190,7 @@
     <div class="hero-container">
       <div class="status-badge">
         <div class="pulse-dot"></div>
-        <span>5G ACTIVE // OPEN FOR GLOBAL NPO &amp; AUTOMATION ROLES</span>
+        <span>5G ACTIVE // OPEN TO GLOBAL NPO &amp; AUTOMATION OPPORTUNITIES</span>
       </div>
 
       <h1 class="hero-title">
@@ -1153,53 +1200,63 @@
       <div class="dual-pillar-tagline">
         <span class="pillar-tag-npo">📡 Senior RAN NPO Specialist</span>
         <span class="pillar-divider">&amp;</span>
-        <span class="pillar-tag-auto">⚡ Telecom Automation Architect</span>
+        <span class="pillar-tag-auto">⚡ Telecom Automation Engineer</span>
       </div>
 
-      <p class="hero-description">
-        A unique combination of <strong>over a decade in core Radio Network Planning &amp; Optimization (NPO)</strong> across 2G/3G/4G/5G mobile networks and <strong>full-stack Python automation engineering</strong>. Delivering end-to-end multi-RAT KPI tuning, deep root-cause troubleshooting, 2,000+ site modernizations, and bespoke software pipelines that accelerate telecom operations.
-      </p>
+      <div class="hero-description">
+        <p>
+          Senior telecommunications professional combining more than 10 years of experience in Radio Access Network Planning and Optimization with advanced Python automation and software engineering capabilities.
+        </p>
+        <p>
+          Experienced in end-to-end performance optimization across 2G, 3G, 4G LTE, and 5G NR networks, including KPI analysis, parameter optimization, root-cause investigation, cluster auditing, network modernization, and executive performance reporting.
+        </p>
+        <p>
+          Designed and developed purpose-built automation solutions that streamline telecom operations, improve data quality, accelerate engineering workflows, and reduce repetitive manual work.
+        </p>
+      </div>
 
+      <div class="hero-chips-header">// Core Expertise</div>
       <div class="hero-chips">
-        <span class="chip npo-chip">📡 2G / 3G / 4G / 5G NPO</span>
-        <span class="chip npo-chip">📊 CSFB / HOSR / CSSR / DCR KPI Tuning</span>
-        <span class="chip npo-chip">🔧 Nokia AirScale &amp; NetAct</span>
-        <span class="chip npo-chip">🗺️ Multi-RAT Cluster Audits</span>
-        <span class="chip auto-chip">⚡ Python 3.12 Automation</span>
-        <span class="chip auto-chip">🛰️ QGIS Headless &amp; PyQGIS</span>
-        <span class="chip auto-chip">🔄 GitHub Actions CI/CD</span>
+        <span class="chip">📡 2G, 3G, 4G LTE, and 5G NR Optimization</span>
+        <span class="chip">📊 CSSR, DCR, CSFB, HOSR, SINR, and Throughput Analysis</span>
+        <span class="chip">🔧 Nokia AirScale and NetAct</span>
+        <span class="chip">🗺️ Multi-RAT Cluster Auditing</span>
+        <span class="chip">⚡ Python Automation</span>
+        <span class="chip">🛰️ QGIS, PyQGIS, and Geospatial Analysis</span>
+        <span class="chip">🔄 GitHub Actions and CI/CD</span>
+        <span class="chip">📑 Automated Technical and Executive Reporting</span>
       </div>
 
       <div class="hero-buttons">
         <a href="#npo-core" class="btn-main">
-          <span>📡 Explore NPO Track Record</span>
+          <span>📡 Explore NPO Expertise</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <a href="#automation-core" class="btn-glass">
-          <span>⚡ View Automation Toolkits</span>
+          <span>⚡ Explore Automation Solutions</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Live Telemetry Bar -->
+  <!-- Live Telemetry Bar / Career Highlights -->
   <div class="telemetry-section">
     <div class="telemetry-grid">
       <div class="telemetry-card">
         <div class="telemetry-val">10+</div>
-        <div class="telemetry-lbl">Years International NPO / RAN</div>
+        <div class="telemetry-lbl">Years of International RAN Experience</div>
       </div>
       <div class="telemetry-card">
         <div class="telemetry-val">2,000+</div>
-        <div class="telemetry-lbl">RAN Sites Modernized (MORAN/MOCN)</div>
+        <div class="telemetry-lbl">RAN Sites Modernized</div>
       </div>
       <div class="telemetry-card">
-        <div class="telemetry-val">48H</div>
-        <div class="telemetry-lbl">Executive NPO Reporting Cadence</div>
+        <div class="telemetry-val">48h</div>
+        <div class="telemetry-lbl">Post-Modernization Performance Reporting</div>
       </div>
       <div class="telemetry-card">
         <div class="telemetry-val">6+</div>
-        <div class="telemetry-lbl">Custom Tooling Suites Built</div>
+        <div class="telemetry-lbl">Custom Automation Suites Developed</div>
       </div>
       <div class="telemetry-card">
         <div class="telemetry-val">10</div>
@@ -1209,146 +1266,280 @@
   </div>
 
   <!-- ======================================================== -->
-  <!-- PILLAR 1: RADIO NETWORK PLANNING & OPTIMIZATION (NPO)   -->
+  <!-- CORE PILLAR 01: RADIO NETWORK PLANNING & OPTIMIZATION   -->
   <!-- ======================================================== -->
   <section id="npo-core">
     <div class="section-head">
       <div class="section-tag tag-npo">Core Pillar 01</div>
-      <h2 class="section-title">Radio Network Planning &amp; Optimization (NPO)</h2>
+      <h2 class="section-title">Radio Network Planning &amp; Optimization</h2>
       <p class="section-desc">
-        Comprehensive radio engineering covering cluster-wide KPI governance, root-cause anomaly diagnostics, parameter harmonization, and multi-technology performance stabilization.
+        End-to-end radio engineering experience covering network performance monitoring, cluster-level KPI governance, parameter optimization, root-cause analysis, network modernization, and multi-technology performance stabilization.
       </p>
     </div>
 
     <div class="pillar-banner">
       <div class="pillar-banner-content">
-        <h3>📡 Telecom Domain Expertise: 2G · 3G · 4G LTE · 5G NR</h3>
-        <p>Proven leadership on Tier-1 operator programs (Nokia Networks, MWingz Project), executing radio audits, worst cell cleansing, and executive KPI reporting.</p>
+        <h3>📡 Telecom Domain Expertise: 2G GSM · 3G UMTS · 4G LTE · 5G NR</h3>
+        <p>Proven experience supporting Tier-1 telecommunications programs, including large-scale Nokia network modernization projects, radio performance audits, worst-cell analysis, KPI optimization, and customer-facing technical reporting.</p>
       </div>
-      <span class="pillar-badge-count count-npo">10+ Years Operational NPO</span>
+      <span class="pillar-badge-count count-npo">10+ Years of Operational RAN Experience</span>
     </div>
 
     <div class="npo-grid">
       <!-- NPO Card 1 -->
       <div class="glass-card npo-card">
         <div class="npo-icon">📊</div>
-        <h3>Radio KPI Tuning &amp; Optimization</h3>
-        <p>Continuous monitoring, statistical analysis, and parameter tuning for critical radio KPIs to meet strict Tier-1 operator SLA thresholds.</p>
-        <div class="npo-metrics-box">CSSR · DCR · CSFB · HOSR · SINR · Throughput · Retainability</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">Nokia NetAct</span>
-          <span class="tech-pill">EdenNet</span>
-          <span class="tech-pill">Worst Cells Audit</span>
-          <span class="tech-pill">Traffic Balancing</span>
+        <h3>Radio KPI Analysis and Optimization</h3>
+        <p>Continuous monitoring, statistical analysis, and parameter optimization of critical radio KPIs, supporting network performance targets and operator service-level requirements.</p>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">KPI Scope</div>
+          <div class="card-list">
+            <span class="card-list-item">CSSR</span>
+            <span class="card-list-item">DCR</span>
+            <span class="card-list-item">CSFB</span>
+            <span class="card-list-item">HOSR</span>
+            <span class="card-list-item">SINR</span>
+            <span class="card-list-item">Throughput</span>
+            <span class="card-list-item">Accessibility</span>
+            <span class="card-list-item">Retainability</span>
+            <span class="card-list-item">Mobility</span>
+            <span class="card-list-item">Availability</span>
+          </div>
+        </div>
+
+        <div class="card-subsection">
+          <div class="card-subhead">Tools and Methods</div>
+          <div class="tech-stack-row" style="border-top:none; padding-top:0;">
+            <span class="tech-pill">Nokia NetAct</span>
+            <span class="tech-pill">EdenNet</span>
+            <span class="tech-pill">Worst-cell analysis</span>
+            <span class="tech-pill">Traffic balancing</span>
+            <span class="tech-pill">KPI trend analysis</span>
+            <span class="tech-pill">Parameter audits</span>
+            <span class="tech-pill">Performance benchmarking</span>
+          </div>
         </div>
       </div>
 
       <!-- NPO Card 2 -->
       <div class="glass-card npo-card">
         <div class="npo-icon">🔍</div>
-        <h3>Root-Cause Analysis &amp; Troubleshooting</h3>
-        <p>Deep-dive investigations on degraded clusters: identifying external/internal interference (PIM), antenna cross-feeders, pilot pollution, and misconfigured handovers.</p>
-        <div class="npo-metrics-box">Interference Mitigation · PIM Detection · Neighbor Audits</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">Trace Analysis</span>
-          <span class="tech-pill">Alarm Corelation</span>
-          <span class="tech-pill">Tilt &amp; Azimuth</span>
-          <span class="tech-pill">Power Offsets</span>
+        <h3>Root-Cause Analysis and Troubleshooting</h3>
+        <p>Advanced investigation of degraded cells and clusters, combining KPI behavior, network configuration, alarms, traces, neighbor relations, interference indicators, and field information.</p>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Investigation Areas</div>
+          <div class="card-list">
+            <span class="card-list-item">Internal &amp; external interference</span>
+            <span class="card-list-item">Passive Intermodulation (PIM)</span>
+            <span class="card-list-item">Antenna cross-feeders</span>
+            <span class="card-list-item">Incorrect azimuth / electrical tilt</span>
+            <span class="card-list-item">Pilot pollution</span>
+            <span class="card-list-item">Missing / incorrect neighbors</span>
+            <span class="card-list-item">Handover failures</span>
+            <span class="card-list-item">Parameter inconsistencies</span>
+            <span class="card-list-item">Coverage &amp; overshooting</span>
+          </div>
+        </div>
+
+        <div class="card-subsection">
+          <div class="card-subhead">Engineering Methods</div>
+          <div class="tech-stack-row" style="border-top:none; padding-top:0;">
+            <span class="tech-pill">Trace analysis</span>
+            <span class="tech-pill">Alarm correlation</span>
+            <span class="tech-pill">Neighbor audits</span>
+            <span class="tech-pill">Power-offset analysis</span>
+            <span class="tech-pill">Tilt &amp; azimuth verification</span>
+            <span class="tech-pill">Configuration sanity</span>
+            <span class="tech-pill">Before/after KPI comparison</span>
+          </div>
         </div>
       </div>
 
       <!-- NPO Card 3 -->
       <div class="glass-card npo-card">
         <div class="npo-icon">📑</div>
-        <h3>48H Performance &amp; Executive Reporting</h3>
-        <p>Delivering high-cadence 48-hour NPO performance evaluation dossiers to customer technical directors on large-scale SWAP and modernization projects.</p>
-        <div class="npo-metrics-box">MWingz Project · Executive Dashboards · SLA Validation</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">Power BI</span>
-          <span class="tech-pill">SharePoint Boards</span>
-          <span class="tech-pill">Nokia NetAct</span>
-          <span class="tech-pill">Customer Review</span>
+        <h3>48-Hour Performance Evaluation and Executive Reporting</h3>
+        <p>Delivery of structured post-modernization performance reports within a 48-hour evaluation cycle for large-scale network modernization and SWAP activities. Provides technical teams and customer stakeholders with a clear view of performance evolution, affected KPIs, outstanding risks, and recommended corrective actions.</p>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Reporting Scope</div>
+          <div class="card-list">
+            <span class="card-list-item">48-hour post-integration monitoring</span>
+            <span class="card-list-item">Before-and-after KPI comparison</span>
+            <span class="card-list-item">Cluster and site-level analysis</span>
+            <span class="card-list-item">SLA validation</span>
+            <span class="card-list-item">Degradation identification</span>
+            <span class="card-list-item">Corrective-action tracking</span>
+            <span class="card-list-item">Executive performance summaries</span>
+          </div>
+        </div>
+
+        <div class="card-subsection">
+          <div class="card-subhead">Platforms</div>
+          <div class="tech-stack-row" style="border-top:none; padding-top:0;">
+            <span class="tech-pill">Power BI</span>
+            <span class="tech-pill">Microsoft SharePoint</span>
+            <span class="tech-pill">Nokia NetAct</span>
+            <span class="tech-pill">Microsoft Excel</span>
+            <span class="tech-pill">Automated reporting pipelines</span>
+          </div>
         </div>
       </div>
 
       <!-- NPO Card 4 -->
       <div class="glass-card npo-card">
         <div class="npo-icon">📡</div>
-        <h3>Multi-Vendor Integration &amp; SWAP</h3>
-        <p>End-to-end commissioning and integration oversight of over 2,000 Huawei to Nokia modernized sites under MORAN (Multi-Operator RAN) and MOCN architectures.</p>
-        <div class="npo-metrics-box">2,000+ Commissioned Sites · SCF/RFDS · Carrier Additions</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">AirScale</span>
-          <span class="tech-pill">Site Manager</span>
-          <span class="tech-pill">MORAN / MOCN</span>
-          <span class="tech-pill">5G NR Rollout</span>
+        <h3>Multi-Technology Integration and Network Modernization</h3>
+        <p>End-to-end integration and commissioning experience supporting the modernization of more than 2,000 multi-technology sites, including Huawei-to-Nokia migrations under MORAN and MOCN architectures.</p>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Responsibilities</div>
+          <div class="card-list">
+            <span class="card-list-item">Site commissioning &amp; integration</span>
+            <span class="card-list-item">Technology &amp; carrier additions</span>
+            <span class="card-list-item">SCF &amp; RFDS validation</span>
+            <span class="card-list-item">Post-integration alarm verification</span>
+            <span class="card-list-item">Configuration sanity checks</span>
+            <span class="card-list-item">Service verification</span>
+            <span class="card-list-item">Acceptance testing</span>
+            <span class="card-list-item">Operator handover support</span>
+          </div>
+        </div>
+
+        <div class="card-subsection">
+          <div class="card-subhead">Technologies and Platforms</div>
+          <div class="tech-stack-row" style="border-top:none; padding-top:0;">
+            <span class="tech-pill">Nokia AirScale</span>
+            <span class="tech-pill">Nokia Site Manager</span>
+            <span class="tech-pill">MORAN</span>
+            <span class="tech-pill">MOCN</span>
+            <span class="tech-pill">2G GSM</span>
+            <span class="tech-pill">3G UMTS</span>
+            <span class="tech-pill">4G LTE</span>
+            <span class="tech-pill">5G NR</span>
+          </div>
         </div>
       </div>
 
       <!-- NPO Card 5 -->
       <div class="glass-card npo-card">
         <div class="npo-icon">🗺️</div>
-        <h3>Frequency &amp; Spectrum Engineering</h3>
-        <p>Managing carrier frequency inventories, spectrum refarming strategies (900/1800/2100/2600/3500 MHz), and neighbor relation matrices across Multi-RAT topologies.</p>
-        <div class="npo-metrics-box">Spectrum Refarming · Layer Strategy · PCI/RSI Planning</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">Frequency Plan</span>
-          <span class="tech-pill">PCI Conflict Check</span>
-          <span class="tech-pill">Handover Matrix</span>
+        <h3>Frequency and Spectrum Engineering</h3>
+        <p>Management and auditing of frequency-related network data across multi-RAT environments, supporting spectrum utilization, layer strategies, mobility performance, and network modernization.</p>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Engineering Scope</div>
+          <div class="card-list">
+            <span class="card-list-item">900 MHz</span>
+            <span class="card-list-item">1800 MHz</span>
+            <span class="card-list-item">2100 MHz</span>
+            <span class="card-list-item">2600 MHz</span>
+            <span class="card-list-item">3500 MHz</span>
+            <span class="card-list-item">Spectrum refarming</span>
+            <span class="card-list-item">Frequency-plan validation</span>
+            <span class="card-list-item">Layer-strategy analysis</span>
+            <span class="card-list-item">PCI conflict &amp; confusion</span>
+            <span class="card-list-item">RSI planning</span>
+            <span class="card-list-item">Handover-matrix validation</span>
+          </div>
         </div>
       </div>
 
       <!-- NPO Card 6 -->
       <div class="glass-card npo-card">
-        <div class="npo-icon">🛡️</div>
-        <h3>QGIS Multi-RAT Geospatial Auditing</h3>
-        <p>Spatial analysis of radio clusters to identify missing neighbor relationships, inverted sector orientations, coverage holes, and co-channel overshooters.</p>
-        <div class="npo-metrics-box">Geographical Polygons · MultiRAT Overlap · Azimuth Verification</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">QGIS</span>
-          <span class="tech-pill">PyQGIS</span>
-          <span class="tech-pill">Shapefiles</span>
-          <span class="tech-pill">Cluster Maps</span>
+        <div class="npo-icon">🛰️</div>
+        <h3>QGIS-Based Multi-RAT Geospatial Auditing</h3>
+        <p>Geospatial analysis of radio clusters to identify topology and configuration issues that are difficult to detect through tabular data alone.</p>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Audit Capabilities</div>
+          <div class="card-list">
+            <span class="card-list-item">Missing neighbor identification</span>
+            <span class="card-list-item">Redundant neighbor detection</span>
+            <span class="card-list-item">Inverted-sector analysis</span>
+            <span class="card-list-item">Azimuth verification</span>
+            <span class="card-list-item">Coverage-gap investigation</span>
+            <span class="card-list-item">Overshooting-cell analysis</span>
+            <span class="card-list-item">Multi-RAT overlap validation</span>
+            <span class="card-list-item">Cluster-boundary analysis</span>
+            <span class="card-list-item">Distance &amp; bearing calculations</span>
+          </div>
+        </div>
+
+        <div class="card-subsection">
+          <div class="card-subhead">Technologies</div>
+          <div class="tech-stack-row" style="border-top:none; padding-top:0;">
+            <span class="tech-pill">QGIS</span>
+            <span class="tech-pill">PyQGIS</span>
+            <span class="tech-pill">GeoPandas</span>
+            <span class="tech-pill">Shapefiles</span>
+            <span class="tech-pill">Spatial indexing</span>
+            <span class="tech-pill">Geographic polygons</span>
+            <span class="tech-pill">Automated cluster maps</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ======================================================== -->
-  <!-- PILLAR 2: CUSTOM TELECOM AUTOMATION & SOFTWARE SUITES    -->
+  <!-- CORE PILLAR 02: TELECOM AUTOMATION & SOFTWARE ENG       -->
   <!-- ======================================================== -->
   <section id="automation-core" style="padding-top:2rem;">
     <div class="section-head">
       <div class="section-tag tag-auto">Core Pillar 02</div>
       <h2 class="section-title">Telecom Automation &amp; Software Engineering</h2>
       <p class="section-desc">
-        Building custom algorithms, headless spatial pipelines, and automated reporting engines that eliminate manual engineering bottlenecks and ensure error-free deployments.
+        Design and development of automation solutions for telecom engineering, data processing, geospatial analysis, reporting, and network modernization. These solutions replace repetitive manual procedures with structured, reproducible workflows, helping engineering teams reduce execution time, improve data consistency, and focus on higher-value technical analysis.
       </p>
     </div>
 
     <div class="pillar-banner">
       <div class="pillar-banner-content">
-        <h3>⚡ Software Stack: Python 3.12 · PyQGIS · Pandas · Docker · CI/CD</h3>
-        <p>Production suites running inside live telecom environments, replacing hours of repetitive manual data manipulation with automated execution.</p>
+        <h3>⚡ Software and Engineering Stack</h3>
+        <p>Python · Pandas · PyQGIS · GeoPandas · Docker · Linux · GitHub Actions · CI/CD</p>
       </div>
-      <span class="pillar-badge-count count-auto">6 Production Suites</span>
+      <span class="pillar-badge-count count-auto">6+ Custom Engineering Suites Developed</span>
     </div>
 
     <div class="projects-grid">
       <!-- Suite 1 -->
       <div class="glass-card project-card">
         <div class="project-meta">
-          <span class="project-category">Reporting Ops</span>
+          <span class="project-category">Reporting Operations</span>
           <span style="font-size:1.2rem;">⚡</span>
         </div>
-        <h3 class="project-title">Automated Email Reporting Suite</h3>
-        <p class="project-text">End-to-end automated pipeline extracting Nokia MWINGZ NPO 48H performance data, validating KPIs, assembling visual executive summaries, and dispatching via SMTP.</p>
-        <div class="impact-box">⚡ Reduced turnaround time from ~4 hours to under 10 minutes</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">Python</span>
-          <span class="tech-pill">SMTP Automation</span>
-          <span class="tech-pill">Excel Engine</span>
-          <span class="tech-pill">GitHub Actions</span>
+        <h3 class="project-title">Automated NPO Reporting Suite</h3>
+        <p class="project-text">End-to-end automation pipeline designed to process network performance information, validate KPI data, generate technical and executive summaries, and prepare recurring NPO reports. Integrates data extraction, transformation, validation, visualization, document preparation, and email distribution into a controlled workflow.</p>
+        
+        <div class="impact-box">⚡ Outcome: Reduced a recurring reporting process from approximately four hours of manual preparation to less than ten minutes of automated execution.</div>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Core Capabilities</div>
+          <div class="card-list">
+            <span class="card-list-item">Performance-data ingestion</span>
+            <span class="card-list-item">KPI validation</span>
+            <span class="card-list-item">Automated Excel processing</span>
+            <span class="card-list-item">Chart &amp; summary generation</span>
+            <span class="card-list-item">Recipient distribution management</span>
+            <span class="card-list-item">Email preparation &amp; delivery</span>
+            <span class="card-list-item">Error handling &amp; execution logging</span>
+            <span class="card-list-item">Scheduled workflow support</span>
+          </div>
+        </div>
+
+        <div class="card-subsection">
+          <div class="card-subhead">Technologies</div>
+          <div class="tech-stack-row">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">Excel processing</span>
+            <span class="tech-pill">SMTP automation</span>
+            <span class="tech-pill">GitHub Actions</span>
+            <span class="tech-pill">Configuration-driven workflows</span>
+          </div>
         </div>
       </div>
 
@@ -1358,14 +1549,35 @@
           <span class="project-category">Geospatial Intelligence</span>
           <span style="font-size:1.2rem;">🗺️</span>
         </div>
-        <h3 class="project-title">RAN NPO ToolBox (QGIS MultiRAT)</h3>
-        <p class="project-text">Autonomous spatial auditing engine that computes missing, redundant, and inverted neighbor relations across 2G/3G/4G/5G clusters with spatial geometry validation.</p>
-        <div class="impact-box">📍 Full cluster audits running in minutes instead of multi-day cycles</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">PyQGIS</span>
-          <span class="tech-pill">GeoPandas</span>
-          <span class="tech-pill">MultiRAT</span>
-          <span class="tech-pill">Topology Engine</span>
+        <h3 class="project-title">RAN NPO ToolBox</h3>
+        <p class="project-text">A multi-RAT geospatial auditing solution designed to analyze radio-network topology and identify potential neighbor, orientation, distance, and configuration anomalies. Combines network configuration with spatial geometry to support cluster audits across 2G, 3G, 4G, and 5G technologies.</p>
+        
+        <div class="impact-box">📍 Outcome: Reduced complex cluster-audit activities from multi-day manual analysis to automated execution within minutes, depending on the network scope and dataset size.</div>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Core Capabilities</div>
+          <div class="card-list">
+            <span class="card-list-item">Missing-neighbor detection</span>
+            <span class="card-list-item">Redundant-neighbor identification</span>
+            <span class="card-list-item">Inverted-sector analysis</span>
+            <span class="card-list-item">Distance &amp; bearing calculations</span>
+            <span class="card-list-item">Site &amp; sector orientation checks</span>
+            <span class="card-list-item">Multi-RAT overlap validation</span>
+            <span class="card-list-item">Cluster-boundary analysis</span>
+            <span class="card-list-item">Geographic map generation</span>
+          </div>
+        </div>
+
+        <div class="card-subsection">
+          <div class="card-subhead">Technologies</div>
+          <div class="tech-stack-row">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">PyQGIS</span>
+            <span class="tech-pill">GeoPandas</span>
+            <span class="tech-pill">QGIS</span>
+            <span class="tech-pill">Spatial geometry</span>
+            <span class="tech-pill">Multi-RAT topology processing</span>
+          </div>
         </div>
       </div>
 
@@ -1376,13 +1588,20 @@
           <span style="font-size:1.2rem;">🔧</span>
         </div>
         <h3 class="project-title">X-Sector Automation Suite</h3>
-        <p class="project-text">CLI and workflow automation orchestrating bulk sector commissioning, remote configuration sanity checks, and NetAct parameter deployments across rollouts.</p>
-        <div class="impact-box">🚀 High-concurrency processing with zero engineer configuration drift</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">Python</span>
-          <span class="tech-pill">NetAct API</span>
-          <span class="tech-pill">SSH Orchestration</span>
-          <span class="tech-pill">Pandas</span>
+        <p class="project-text">Command-line and workflow automation designed to support bulk sector-processing activities, configuration validation, and network-modernization procedures. Standardizes repetitive engineering tasks and helps reduce inconsistencies during large-scale deployment activities.</p>
+        
+        <div class="impact-box">🚀 Engineering Benefits: Faster bulk processing, standardized execution, reduced manual effort, improved result traceability, consistent validation rules, and lower risk of configuration drift.</div>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Technologies</div>
+          <div class="tech-stack-row">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">Command-line interfaces</span>
+            <span class="tech-pill">SSH orchestration</span>
+            <span class="tech-pill">NetAct-related workflows</span>
+            <span class="tech-pill">Configuration validation</span>
+          </div>
         </div>
       </div>
 
@@ -1393,56 +1612,122 @@
           <span style="font-size:1.2rem;">📊</span>
         </div>
         <h3 class="project-title">Combined Huawei Dumps Engine</h3>
-        <p class="project-text">Scalable ETL processor parsing millions of raw XML/CSV vendor dump records to support large-scale SWAP network migrations and audit trails.</p>
-        <div class="impact-box">💾 Millions of parameters parsed and validated in seconds</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">Python ETL</span>
-          <span class="tech-pill">High-Performance Regex</span>
-          <span class="tech-pill">Data Sanitization</span>
+        <p class="project-text">A high-performance ETL solution designed to consolidate, clean, transform, and validate large volumes of vendor configuration data during network-modernization and audit activities. Converts raw XML and CSV records into structured datasets suitable for analysis, comparison, migration support, and audit reporting.</p>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Core Capabilities</div>
+          <div class="card-list">
+            <span class="card-list-item">XML &amp; CSV parsing</span>
+            <span class="card-list-item">Data consolidation</span>
+            <span class="card-list-item">Schema normalization</span>
+            <span class="card-list-item">Parameter extraction</span>
+            <span class="card-list-item">Data-quality validation</span>
+            <span class="card-list-item">Duplicate detection</span>
+            <span class="card-list-item">Pattern-based processing</span>
+            <span class="card-list-item">Migration audit trails</span>
+            <span class="card-list-item">Structured output generation</span>
+          </div>
+        </div>
+
+        <div class="card-subsection">
+          <div class="card-subhead">Technologies</div>
+          <div class="tech-stack-row">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">ETL workflows</span>
+            <span class="tech-pill">XML &amp; CSV processing</span>
+            <span class="tech-pill">Regular expressions</span>
+            <span class="tech-pill">Data sanitization</span>
+            <span class="tech-pill">Batch processing</span>
+          </div>
         </div>
       </div>
 
       <!-- Suite 5 -->
       <div class="glass-card project-card">
         <div class="project-meta">
-          <span class="project-category">Headless Pipelines</span>
+          <span class="project-category">Headless Geospatial Pipelines</span>
           <span style="font-size:1.2rem;">🛰️</span>
         </div>
-        <h3 class="project-title">QGIS Automation Suite (Headless)</h3>
-        <p class="project-text">Dockerized geospatial analysis suite executing heavy spatial pipelines server-side without GUI overhead, ready for continuous integration triggers.</p>
-        <div class="impact-box">🌐 Server-side spatial computing with automated CI testing</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">Headless QGIS</span>
-          <span class="tech-pill">Docker</span>
-          <span class="tech-pill">Linux</span>
-          <span class="tech-pill">CI/CD</span>
+        <h3 class="project-title">QGIS Automation Suite</h3>
+        <p class="project-text">A headless geospatial-processing environment designed to execute QGIS and PyQGIS workflows on Linux systems without requiring a graphical interface. Supports reproducible server-side execution, automated testing, scheduled processing, and integration with continuous-delivery pipelines.</p>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Core Capabilities</div>
+          <div class="card-list">
+            <span class="card-list-item">Headless QGIS execution</span>
+            <span class="card-list-item">Server-side spatial analysis</span>
+            <span class="card-list-item">Reproducible runtime</span>
+            <span class="card-list-item">Automated pipeline testing</span>
+            <span class="card-list-item">Scheduled processing</span>
+            <span class="card-list-item">Container deployment</span>
+            <span class="card-list-item">CI/CD integration</span>
+            <span class="card-list-item">Execution logging</span>
+          </div>
+        </div>
+
+        <div class="card-subsection">
+          <div class="card-subhead">Technologies</div>
+          <div class="tech-stack-row">
+            <span class="tech-pill">QGIS</span>
+            <span class="tech-pill">PyQGIS</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Linux</span>
+            <span class="tech-pill">GitHub Actions</span>
+            <span class="tech-pill">CI/CD</span>
+          </div>
         </div>
       </div>
 
       <!-- Suite 6 -->
       <div class="glass-card project-card">
         <div class="project-meta">
-          <span class="project-category">Architecture Standards</span>
+          <span class="project-category">Software Architecture</span>
           <span style="font-size:1.2rem;">📐</span>
         </div>
-        <h3 class="project-title">ProjectBase Scaffold</h3>
-        <p class="project-text">Enterprise engineering scaffold establishing automated CI/CD quality gates, linting standards, and delivery metrics across all tooling repos.</p>
-        <div class="impact-box">⚡ Instant project initialization with zero setup debt</div>
-        <div class="tech-stack-row">
-          <span class="tech-pill">GitHub Actions</span>
-          <span class="tech-pill">Pre-commit Gates</span>
-          <span class="tech-pill">Semantic SDLC</span>
+        <h3 class="project-title">ProjectBase Engineering Scaffold</h3>
+        <p class="project-text">A reusable engineering foundation designed to standardize the structure, configuration, testing, documentation, and delivery of Python-based automation projects. Accelerates project initialization while promoting consistent engineering practices across repositories.</p>
+        
+        <div class="card-subsection">
+          <div class="card-subhead">Included Standards</div>
+          <div class="card-list">
+            <span class="card-list-item">Standardized project structure</span>
+            <span class="card-list-item">Environment configuration</span>
+            <span class="card-list-item">Logging framework</span>
+            <span class="card-list-item">Automated testing</span>
+            <span class="card-list-item">Code-quality checks</span>
+            <span class="card-list-item">Pre-commit validation</span>
+            <span class="card-list-item">Versioning conventions</span>
+            <span class="card-list-item">Documentation structure</span>
+            <span class="card-list-item">CI/CD workflows</span>
+            <span class="card-list-item">Release preparation</span>
+          </div>
+        </div>
+
+        <div class="card-subsection">
+          <div class="card-subhead">Technologies and Practices</div>
+          <div class="tech-stack-row">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">GitHub Actions</span>
+            <span class="tech-pill">Pre-commit</span>
+            <span class="tech-pill">Automated quality gates</span>
+            <span class="tech-pill">Semantic versioning</span>
+            <span class="tech-pill">Reusable architecture</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Career Experience Track Record -->
+  <!-- ======================================================== -->
+  <!-- CAREER TRAJECTORY: PROFESSIONAL EXPERIENCE              -->
+  <!-- ======================================================== -->
   <section id="experience">
     <div class="section-head">
       <div class="section-tag tag-track">Career Trajectory</div>
-      <h2 class="section-title">Proven Engineering Track Record</h2>
-      <p class="section-desc">Key leadership and execution milestones across Tier-1 telecom operators and global network deployments.</p>
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-desc">A progressive career across RAN commissioning, integration, network modernization, performance optimization, technical reporting, and telecom automation.</p>
     </div>
 
     <div class="timeline-container">
@@ -1452,18 +1737,22 @@
         <div class="timeline-card-content glass-card">
           <div class="timeline-top">
             <h3 class="company-name">Nokia Networks</h3>
-            <span class="timeline-badge">Apr 2022 – Present</span>
+            <span class="timeline-badge">April 2022 to Present</span>
           </div>
-          <div class="role-title">RAN Performance &amp; Optimization (NPO) Specialist · Lisbon, Portugal</div>
+          <div class="role-title">RAN Performance &amp; Optimization Specialist · Lisbon, Portugal</div>
           <ul class="timeline-points">
-            <li><strong>Core NPO Leadership:</strong> Spearheaded KPI-driven performance monitoring, cluster parameter audits, and worst-cell root-cause remediation on the major SWAP 2G/3G/4G project.</li>
-            <li><strong>Executive Reporting Cadence:</strong> Delivered high-visibility 48-Hour NPO performance evaluation reports directly to customer technical directorships.</li>
-            <li><strong>Automation Engineering:</strong> Conceived, built, and maintained Python automation ecosystems that eliminated repetitive reporting and spatial data bottlenecks.</li>
-            <li><strong>Strategic Decision Support:</strong> Formulated network redistribution plans, frequency layer strategies, and capacity expansion recommendations.</li>
+            <li>Lead KPI-driven network-performance monitoring, cluster audits, worst-cell analysis, and root-cause investigation for large-scale 2G, 3G, 4G, and 5G environments.</li>
+            <li>Analyze accessibility, retainability, mobility, availability, interference, traffic, and throughput indicators to identify performance degradation and recommend corrective actions.</li>
+            <li>Deliver structured 48-hour post-modernization performance reports to customer engineering teams and technical management.</li>
+            <li>Perform radio-parameter audits, neighbor-relation assessments, spectrum analysis, coverage investigations, and multi-RAT cluster validation.</li>
+            <li>Develop and maintain Python automation solutions for KPI reporting, data processing, geospatial analysis, and recurring engineering workflows.</li>
+            <li>Transform large and complex network datasets into actionable technical findings and decision-support material.</li>
+            <li>Support network redistribution, frequency-layer strategies, capacity expansion, and performance-stabilization activities.</li>
+            <li>Collaborate with integration, optimization, field, planning, project-management, and customer teams to resolve network issues.</li>
           </ul>
           <div class="award-card">
             <span>🎖️</span>
-            <span>Excellence in Commitment Award — MWingz Project (2023)</span>
+            <span>Recognition: Excellence in Commitment Award, MWingz Project, 2023</span>
           </div>
         </div>
       </div>
@@ -1474,61 +1763,67 @@
         <div class="timeline-card-content glass-card">
           <div class="timeline-top">
             <h3 class="company-name">Nokia Networks</h3>
-            <span class="timeline-badge">Feb 2016 – Mar 2022</span>
+            <span class="timeline-badge">February 2016 to March 2022</span>
           </div>
           <div class="role-title">RAN Integration &amp; Commissioning Engineer · Lisbon, Portugal</div>
           <ul class="timeline-points">
-            <li><strong>Massive Modernization:</strong> Directed remote integration and cutover of <strong>2,000+ multi-technology sites</strong> during massive Huawei-to-Nokia MORAN &amp; MOCN modernizations.</li>
-            <li><strong>Multi-RAT Commissioning:</strong> Executed end-to-end commissioning, sector expansions, SCF/RFDS scripts validation, and tech upgrades across 2G/3G/4G/5G.</li>
-            <li><strong>SLA &amp; Acceptance Testing:</strong> Supervised live verification test calls, alarm troubleshooting, and strict SLA compliance for operator handovers.</li>
-            <li><strong>Cross-Functional Alignment:</strong> Coordinated seamless rollouts connecting field operations, RF planning, and project management offices internationally.</li>
+            <li>Supported the remote integration, commissioning, and cutover of more than 2,000 multi-technology sites during Huawei-to-Nokia modernization programs.</li>
+            <li>Executed commissioning and integration activities across 2G, 3G, 4G, and 5G radio technologies.</li>
+            <li>Supported MORAN and MOCN deployment environments involving multiple operators and shared radio infrastructure.</li>
+            <li>Validated SCF and RFDS documentation, radio configurations, carrier additions, sector expansions, and technology upgrades.</li>
+            <li>Performed post-integration alarm checks, configuration validation, service verification, and acceptance-testing activities.</li>
+            <li>Supported live test calls and troubleshooting during site activation and customer-handover procedures.</li>
+            <li>Coordinated with field operations, RF planning, optimization teams, project managers, and customer representatives.</li>
+            <li>Contributed to the standardization and automation of recurring commissioning and validation activities.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Certifications -->
+  <!-- ======================================================== -->
+  <!-- CONTINUOUS PROFESSIONAL DEVELOPMENT: CERTIFICATIONS     -->
+  <!-- ======================================================== -->
   <section id="certifications">
     <div class="section-head">
-      <div class="section-tag tag-certs">Continuous Mastery</div>
+      <div class="section-tag tag-certs">Continuous Professional Development</div>
       <h2 class="section-title">Certifications &amp; Accreditations</h2>
-      <p class="section-desc">Certified in bleeding-edge 5G radio optimization, microwave transport, agile delivery, and data engineering.</p>
+      <p class="section-desc">Professional development covering 5G radio optimization, telecom deployment, data engineering, digital transformation, agile delivery, and technical training.</p>
     </div>
 
     <div class="certs-matrix">
       <div class="cert-card">
         <div class="cert-icon">📡</div>
         <div class="cert-info">
-          <h4>5G Radio Site Cluster Optimization</h4>
+          <h4>5G Radio Site and Cluster Optimization</h4>
           <span>NCSS NPS Expert</span>
         </div>
       </div>
       <div class="cert-card">
         <div class="cert-icon">⚡</div>
         <div class="cert-info">
-          <h4>5G Radio Optimisation – Expert</h4>
-          <span>Nokia Professional</span>
+          <h4>5G Radio Optimization</h4>
+          <span>Nokia Professional Expert</span>
         </div>
       </div>
       <div class="cert-card">
         <div class="cert-icon">🌐</div>
         <div class="cert-info">
           <h4>NCSA 5G Solution</h4>
-          <span>Nokia Certified</span>
+          <span>Nokia Certification</span>
         </div>
       </div>
       <div class="cert-card">
         <div class="cert-icon">📡</div>
         <div class="cert-info">
-          <h4>GS Deploy – Microwave Wavence Services</h4>
+          <h4>GS Deploy, Microwave Wavence Services</h4>
           <span>Nokia Deployment</span>
         </div>
       </div>
       <div class="cert-card">
         <div class="cert-icon">📊</div>
         <div class="cert-info">
-          <h4>L1 Data Analyst &amp; Data Engineer</h4>
+          <h4>L1 Data Analyst and Data Engineer</h4>
           <span>Nokia Digital</span>
         </div>
       </div>
@@ -1543,7 +1838,7 @@
         <div class="cert-icon">🔄</div>
         <div class="cert-info">
           <h4>L1 Scrum Master</h4>
-          <span>Agile Nokia Program</span>
+          <span>Nokia Agile Program</span>
         </div>
       </div>
       <div class="cert-card">
@@ -1556,7 +1851,7 @@
       <div class="cert-card">
         <div class="cert-icon">🛡️</div>
         <div class="cert-info">
-          <h4>ESD &amp; Calibration Awareness</h4>
+          <h4>ESD and Calibration Awareness</h4>
           <span>Quality Standard</span>
         </div>
       </div>
@@ -1564,13 +1859,15 @@
         <div class="cert-icon">🚀</div>
         <div class="cert-info">
           <h4>Digital Trainer</h4>
-          <span>Technical Telecom Training</span>
+          <span>Technical Telecommunications Training</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Terminal HUD / Contact -->
+  <!-- ======================================================== -->
+  <!-- TERMINAL HUD / CONTACT                                   -->
+  <!-- ======================================================== -->
   <section id="contact">
     <div class="terminal-container">
       <div class="terminal-header">
@@ -1580,12 +1877,29 @@
           <div class="t-dot t-green"></div>
         </div>
         <div class="terminal-title">hlt@ran-npo-station:~</div>
-        <div style="font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:#34d399;">● READY FOR NPO &amp; AUTOMATION</div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:#34d399;">● AVAILABLE FOR NPO &amp; AUTOMATION OPPORTUNITIES</div>
       </div>
       <div class="terminal-body">
         <div class="section-tag" style="color:var(--cyan); margin-bottom:1rem;">Establish Connection</div>
-        <h2>Let's Optimize &amp; Automate Your Network</h2>
-        <p>Available for senior RAN NPO roles, radio optimization consulting, bespoke telecom software engineering, and high-impact international missions.</p>
+        <h2>Let’s Optimize and Automate Your Network</h2>
+        <p>
+          Available for opportunities involving RAN performance and optimization, multi-RAT network analysis, telecom automation, geospatial engineering, technical reporting, and international network-transformation programs.
+        </p>
+        <p>
+          I bring together practical radio-network experience and software-engineering capabilities to help teams analyze network behavior, automate repetitive processes, improve data quality, and accelerate technical decision-making.
+        </p>
+
+        <div class="hero-chips-header" style="margin-top:1.5rem; margin-bottom:0.75rem;">// Areas of Interest</div>
+        <div class="interest-list">
+          <span class="interest-tag">Senior RAN NPO roles</span>
+          <span class="interest-tag">Radio performance and optimization</span>
+          <span class="interest-tag">Multi-RAT network audits</span>
+          <span class="interest-tag">Telecom automation engineering</span>
+          <span class="interest-tag">Python-based internal tools</span>
+          <span class="interest-tag">QGIS and geospatial automation</span>
+          <span class="interest-tag">Network-modernization programs</span>
+          <span class="interest-tag">International technical assignments</span>
+        </div>
         
         <div class="connect-grid">
           <a href="https://www.linkedin.com/in/heltonlimatrindade" target="_blank" rel="noopener noreferrer" class="connect-btn">
@@ -1610,7 +1924,7 @@
         </div>
 
         <div style="font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:var(--text-dim);">
-          Direct Endpoint: <span style="color:var(--sky);">heltonlimatrindade@gmail.com</span>
+          Direct contact: <span style="color:var(--sky);">heltonlimatrindade@gmail.com</span>
         </div>
       </div>
     </div>
@@ -1618,7 +1932,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 Helton Lima da Trindade · Senior RAN NPO Engineering &amp; Automation Architecture · Lisbon, Portugal</p>
+    <p>© 2026 Helton Lima da Trindade · Senior RAN NPO Specialist &amp; Telecom Automation Engineer · Lisbon, Portugal</p>
   </footer>
 
   <!-- Interactive Logic & Mobile Navigation -->
