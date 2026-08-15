@@ -1,313 +1,1341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Helton Lima da Trindade | Senior RAN Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <title>Helton Lima da Trindade | Senior RAN &amp; Telecom Automation Engineer</title>
+  <meta name="description" content="Senior RAN Engineer &amp; Telecom Automation Specialist. 10+ years optimizing 2G/3G/4G/5G mobile networks, building Python automation suites, and scaling geospatial intelligence." />
+  
+  <!-- Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --navy: #003366;
-      --blue: #0055a5;
-      --accent: #00aaff;
-      --light: #f4f7fb;
-      --white: #ffffff;
-      --gray: #6b7280;
-      --dark: #111827;
-      --card-bg: #ffffff;
-      --border: #e5e7eb;
+      --bg-primary: #050811;
+      --bg-secondary: #0a0f1d;
+      --bg-card: rgba(13, 20, 36, 0.7);
+      --bg-card-hover: rgba(19, 30, 54, 0.85);
+      --border-subtle: rgba(56, 189, 248, 0.12);
+      --border-glow: rgba(56, 189, 248, 0.4);
+      --cyan: #00f0ff;
+      --sky: #38bdf8;
+      --blue: #2563eb;
+      --indigo: #6366f1;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
     }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
-    nav { position: fixed; top: 0; width: 100%; background: var(--navy); display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.3); }
-    nav .logo { color: white; font-weight: 700; font-size: 1.1rem; }
-    nav ul { list-style: none; display: flex; gap: 2rem; }
-    nav ul a { color: #cbd5e1; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
-    nav ul a:hover { color: var(--accent); }
-    .hero { min-height: 100vh; background: linear-gradient(135deg, var(--navy) 0%, #005599 60%, #0077cc 100%); display: flex; align-items: center; justify-content: center; text-align: center; padding: 6rem 2rem 4rem; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .hero-content { position: relative; max-width: 750px; }
-    .hero h1 { font-size: clamp(2rem,5vw,3.2rem); color: white; font-weight: 900; line-height: 1.1; margin-bottom: 0.75rem; }
-    .hero .subtitle { font-size: 1.15rem; color: #93c5fd; margin-bottom: 0.5rem; font-weight: 600; }
-    .hero .location { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 2rem; }
-    .hero-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 2.5rem; }
-    .hero-badge { background: rgba(255,255,255,0.12); color: #e0f2fe; padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); }
-    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .btn-primary { background: var(--accent); color: var(--navy); font-weight: 700; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(0,170,255,0.4); }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,170,255,0.5); }
-    .btn-secondary { background: transparent; color: white; font-weight: 600; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1rem; border: 2px solid rgba(255,255,255,0.4); transition: border-color 0.2s, background 0.2s; }
-    .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.08); }
-    .stats-bar { background: var(--navy); color: white; display: flex; justify-content: center; flex-wrap: wrap; }
-    .stat { padding: 1.5rem 3rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.1); }
-    .stat:last-child { border-right: none; }
-    .stat-number { font-size: 2rem; font-weight: 900; color: var(--accent); }
-    .stat-label { font-size: 0.8rem; color: #93c5fd; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-    section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
-    .section-label { font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; }
-    h2 { font-size: clamp(1.6rem,3vw,2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 1rem; }
-    .section-divider { width: 50px; height: 4px; background: var(--accent); border-radius: 2px; margin-bottom: 2.5rem; }
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.5rem; }
-    .skill-card { background: var(--card-bg); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border); text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; }
-    .skill-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,85,165,0.12); }
-    .skill-icon { font-size: 2rem; margin-bottom: 0.75rem; }
-    .skill-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
-    .skill-card p { font-size: 0.82rem; color: var(--gray); }
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 1.5rem; }
-    .project-card { background: var(--card-bg); border-radius: 14px; padding: 1.75rem; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,85,165,0.15); }
-    .project-tag { display: inline-block; background: #e0f2fe; color: var(--blue); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.7rem; border-radius: 999px; margin-bottom: 1rem; text-transform: uppercase; }
-    .project-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
-    .project-card p { font-size: 0.88rem; color: var(--gray); flex-grow: 1; margin-bottom: 1rem; }
-    .project-impact { background: linear-gradient(135deg,#e0f2fe,#f0f9ff); border-left: 3px solid var(--accent); padding: 0.6rem 0.9rem; border-radius: 0 8px 8px 0; font-size: 0.82rem; font-weight: 600; color: var(--navy); margin-bottom: 1rem; }
-    .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .stack-tag { background: #f1f5f9; color: #475569; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: 600; }
-    .timeline { position: relative; padding-left: 2rem; }
-    .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--accent), var(--navy)); }
-    .timeline-item { position: relative; margin-bottom: 3rem; padding-left: 1.5rem; }
-    .timeline-dot { position: absolute; left: -2.4rem; top: 0.3rem; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 3px solid var(--navy); box-shadow: 0 0 0 3px rgba(0,170,255,0.2); }
-    .timeline-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem; }
-    .timeline-company { font-size: 1.1rem; font-weight: 800; color: var(--navy); }
-    .timeline-date { font-size: 0.85rem; color: var(--gray); font-weight: 600; background: var(--light); padding: 0.2rem 0.7rem; border-radius: 999px; }
-    .timeline-role { font-size: 0.95rem; color: var(--blue); font-weight: 600; margin-bottom: 0.75rem; }
-    .timeline-item ul { padding-left: 1.2rem; }
-    .timeline-item ul li { font-size: 0.9rem; color: #374151; margin-bottom: 0.4rem; }
-    .award-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg,#fef3c7,#fffbeb); border: 1px solid #fcd34d; color: #92400e; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 700; margin-top: 1rem; }
-    .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 1rem; }
-    .cert-item { display: flex; align-items: flex-start; gap: 0.75rem; background: var(--card-bg); padding: 1rem 1.25rem; border-radius: 10px; border: 1px solid var(--border); font-size: 0.88rem; font-weight: 600; color: var(--dark); }
-    .cert-item::before { content: '✅'; font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
-    .contact-section { background: linear-gradient(135deg, var(--navy), #005599); border-radius: 20px; padding: 3rem; text-align: center; color: white; }
-    .contact-section h2 { color: white; margin-bottom: 0.5rem; }
-    .contact-section p { color: #93c5fd; margin-bottom: 2rem; }
-    .contact-links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .contact-btn { display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 10px; font-weight: 600; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2); transition: background 0.2s, transform 0.2s; }
-    .contact-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
-    footer { text-align: center; padding: 2rem; font-size: 0.85rem; background: var(--navy); color: #64748b; }
-    @media (max-width: 768px) {
-      nav ul { display: none; }
-      .stats-bar { flex-direction: column; }
-      .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-      .hero-ctas { flex-direction: column; align-items: center; }
+    html { scroll-behavior: smooth; font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg-primary); color: var(--text-main); }
+    body { overflow-x: hidden; position: relative; line-height: 1.6; }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.25); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
+
+    /* Canvas background */
+    #mesh-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* Ambient Lighting */
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 { top: 5%; left: 15%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 70%); }
+    .orb-2 { top: 40%; right: 10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(99, 102, 241, 0.07) 0%, transparent 70%); }
+    .orb-3 { bottom: 10%; left: 20%; width: 550px; height: 550px; background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%); }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(5, 8, 17, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    }
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.5px;
+    }
+    .brand-logo .logo-box {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(37, 99, 235, 0.2));
+      border: 1px solid var(--cyan);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--cyan);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--cyan);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--cyan);
+      transition: width 0.2s ease;
+      box-shadow: 0 0 8px var(--cyan);
+    }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(37, 99, 235, 0.2));
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      padding: 0.55rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .nav-cta:hover {
+      background: var(--cyan);
+      color: var(--bg-primary);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      min-height: 100vh;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8rem 1.5rem 5rem;
+    }
+    .hero-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #34d399;
+      margin-bottom: 2rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      line-height: 1.08;
+      margin-bottom: 1.25rem;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 20%, var(--sky) 60%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: var(--sky);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: -0.2px;
+    }
+    .hero-description {
+      max-width: 780px;
+      margin: 0 auto 2.5rem;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    .chip {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: #cbd5e1;
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.2s ease;
+    }
+    .chip:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: rgba(0, 240, 255, 0.05);
+      transform: translateY(-2px);
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      justify-content: center;
+    }
+    .btn-main {
+      background: linear-gradient(135deg, var(--cyan), #0099ff);
+      color: #050811;
+      font-weight: 800;
+      padding: 0.95rem 2.25rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 25px rgba(0, 240, 255, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .btn-main:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 35px rgba(0, 240, 255, 0.55);
+      color: #000;
+    }
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      font-weight: 700;
+      padding: 0.95rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--cyan);
+      color: var(--cyan);
+      transform: translateY(-3px);
+    }
+
+    /* Live Telemetry Bar */
+    .telemetry-section {
+      position: relative;
+      z-index: 10;
+      max-width: 1200px;
+      margin: -2rem auto 4rem;
+      padding: 0 1.5rem;
+    }
+    .telemetry-grid {
+      background: rgba(10, 15, 29, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      padding: 1.5rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    .telemetry-card {
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      position: relative;
+    }
+    .telemetry-card:last-child { border-right: none; }
+    .telemetry-val {
+      font-size: 2.25rem;
+      font-weight: 900;
+      color: var(--cyan);
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: -1px;
+      margin-bottom: 0.25rem;
+      text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+    }
+    .telemetry-lbl {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Global Section Container */
+    section {
+      position: relative;
+      z-index: 10;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 6rem 1.5rem;
+    }
+    .section-head {
+      margin-bottom: 3.5rem;
+    }
+    .section-tag {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--cyan);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .section-tag::before {
+      content: '//';
+      color: var(--sky);
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 650px;
+    }
+
+    /* Glass Cards */
+    .glass-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.4), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .glass-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-glow);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 240, 255, 0.1);
+    }
+    .glass-card:hover::before { opacity: 1; }
+
+    /* Skills Grid */
+    .skills-matrix {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .skill-icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: var(--cyan);
+    }
+    .skill-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--text-main);
+    }
+    .skill-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1.25rem;
+    }
+    .mini-tag {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .project-category {
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .project-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+    }
+    .project-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    .impact-box {
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.08), rgba(37, 99, 235, 0.08));
+      border-left: 3px solid var(--cyan);
+      padding: 0.85rem 1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #e0f2fe;
+      margin-bottom: 1.5rem;
+    }
+    .tech-stack-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .tech-pill {
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      color: var(--sky);
+      background: rgba(56, 189, 248, 0.08);
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid rgba(56, 189, 248, 0.15);
+    }
+
+    /* Experience Timeline */
+    .timeline-container {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--cyan), var(--blue), transparent);
+    }
+    .timeline-card {
+      position: relative;
+      margin-bottom: 3.5rem;
+    }
+    .timeline-node {
+      position: absolute;
+      left: -2rem;
+      top: 10px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 3px solid var(--cyan);
+      box-shadow: 0 0 15px var(--cyan);
+    }
+    .timeline-card-content {
+      margin-left: 1.5rem;
+    }
+    .timeline-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .company-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .timeline-badge {
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--sky);
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    .role-title {
+      font-size: 1.05rem;
+      color: var(--cyan);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .timeline-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .timeline-points li {
+      position: relative;
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .timeline-points li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-weight: bold;
+    }
+    .award-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(245, 158, 11, 0.03));
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      padding: 0.75rem 1.25rem;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+      color: #fbbf24;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* Certifications Grid */
+    .certs-matrix {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1rem;
+    }
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.2s ease;
+    }
+    .cert-card:hover {
+      border-color: var(--cyan);
+      background: var(--bg-card-hover);
+      transform: translateX(4px);
+    }
+    .cert-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: rgba(0, 240, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cyan);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .cert-info h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+    }
+    .cert-info span {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Terminal HUD & Contact Section */
+    .terminal-container {
+      background: #070c18;
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+    .terminal-header {
+      background: #0d1527;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .t-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+    .t-red { background: #ef4444; }
+    .t-yellow { background: #f59e0b; }
+    .t-green { background: #10b981; }
+    .terminal-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+    .terminal-body {
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .terminal-body h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+    }
+    .terminal-body p {
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto 2.5rem;
+      font-size: 1.05rem;
+    }
+    .connect-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .connect-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 0.85rem 1.75rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: all 0.25s ease;
+    }
+    .connect-btn:hover {
+      background: rgba(0, 240, 255, 0.1);
+      border-color: var(--cyan);
+      color: var(--cyan);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 240, 255, 0.2);
+    }
+    .copy-toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--cyan);
+      color: var(--bg-primary);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 25px rgba(0, 240, 255, 0.4);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 9999;
+    }
+    .copy-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .telemetry-grid { grid-template-columns: 1fr 1fr; }
+      .telemetry-card { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .telemetry-grid { grid-template-columns: 1fr; }
+      .hero-buttons { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="logo">HLT ⚡</div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <!-- Animated Telecom Constellation Canvas -->
+  <canvas id="mesh-canvas"></canvas>
+
+  <!-- Ambient Light Orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="copy-toast">⚡ Copied to clipboard!</div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-box">HLT</div>
+        <span>HELTON LIMA</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Telemetry &amp; Stack</a></li>
+        <li><a href="#projects">Engineering Suites</a></li>
+        <li><a href="#experience">Track Record</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">
+        <span>⚡ Direct Connect</span>
+      </a>
+    </div>
   </nav>
 
-  <div class="hero">
-    <div class="hero-content">
-      <svg width="160" height="160" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="border-radius:50%; display:block; margin:0 auto 1.5rem;">
-        <defs>
-          <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#0055a5"/><stop offset="100%" stop-color="#001f3f"/></radialGradient>
-          <filter id="glow"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00aaff"/><stop offset="50%" stop-color="#0077cc"/><stop offset="100%" stop-color="#00aaff"/></linearGradient>
-          <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#003366"/><stop offset="100%" stop-color="#0055a5"/></linearGradient>
-          <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.05)"/></pattern>
-        </defs>
-        <rect width="400" height="400" rx="200" fill="url(#cardGrad)"/>
-        <rect width="400" height="400" rx="200" fill="url(#dots)"/>
-        <circle cx="370" cy="30" r="60" fill="none" stroke="rgba(0,170,255,0.15)" stroke-width="1.5"/>
-        <circle cx="370" cy="30" r="90" fill="none" stroke="rgba(0,170,255,0.08)" stroke-width="1"/>
-        <circle cx="30" cy="370" r="60" fill="none" stroke="rgba(0,170,255,0.1)" stroke-width="1.5"/>
-        <g transform="translate(28,28)" opacity="0.5">
-          <path d="M0 20 Q10 8 20 20" fill="none" stroke="#00aaff" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M-6 26 Q10 4 26 26" fill="none" stroke="#00aaff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-          <circle cx="10" cy="22" r="2.5" fill="#00aaff"/>
-        </g>
-        <circle cx="200" cy="165" r="93" fill="none" stroke="rgba(0,170,255,0.2)" stroke-width="8"/>
-        <circle cx="200" cy="165" r="89" fill="none" stroke="url(#ringGrad)" stroke-width="3" filter="url(#glow)"/>
-        <circle cx="200" cy="165" r="85" fill="#001f3f"/>
-        <circle cx="200" cy="140" r="32" fill="#1a4a7a"/>
-        <ellipse cx="200" cy="220" rx="55" ry="35" fill="#1a4a7a"/>
-        <rect x="191" y="168" width="18" height="20" rx="4" fill="#1a4a7a"/>
-        <path d="M182 188 L200 205 L218 188" fill="none" stroke="#00aaff" stroke-width="2.5" stroke-linejoin="round" opacity="0.7"/>
-        <text x="200" y="155" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="44" fill="white" opacity="0.15">H</text>
-        <rect x="152" y="234" width="96" height="22" rx="11" fill="#00aaff" opacity="0.9"/>
-        <text x="200" y="249" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="9.5" fill="white" letter-spacing="0.5">● AVAILABLE TO HIRE</text>
-        <text x="200" y="305" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="19" fill="white">Helton Lima da Trindade</text>
-        <text x="200" y="328" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="12" fill="#93c5fd">Senior RAN Engineer · Nokia</text>
-      </svg>
-      <h1>Helton Lima da Trindade</h1>
-      <p class="subtitle">Senior RAN Engineer &amp; Automation Specialist</p>
-      <p class="location">📍 Lisbon, Portugal &nbsp;·&nbsp; Nokia Networks &nbsp;·&nbsp; 10+ Years Experience</p>
-      <div class="hero-badges">
-        <span class="hero-badge">2G / 3G / 4G / 5G</span>
-        <span class="hero-badge">Python Automation</span>
-        <span class="hero-badge">QGIS</span>
-        <span class="hero-badge">Nokia AirScale</span>
-        <span class="hero-badge">KPI Optimization</span>
-        <span class="hero-badge">CI/CD</span>
-        <span class="hero-badge">Power BI</span>
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-container">
+      <div class="status-badge">
+        <div class="pulse-dot"></div>
+        <span>5G ACTIVE // OPEN FOR GLOBAL ENGAGEMENTS</span>
       </div>
-      <div class="hero-ctas">
-        <a href="cv_helton_lima.pdf" download class="btn-primary">📄 Download CV</a>
-        <a href="#contact" class="btn-secondary">💬 Hire Me</a>
+
+      <h1 class="hero-title">
+        Helton Lima <span class="text-gradient">da Trindade</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Senior RAN Engineer &amp; Telecom Automation Specialist
+      </p>
+
+      <p class="hero-description">
+        Bridging high-scale wireless telecommunications and modern software engineering. Over a decade of proven expertise deploying 2,000+ multi-vendor sites, engineering Python automation ecosystems, and executing geospatial network intelligence.
+      </p>
+
+      <div class="hero-chips">
+        <span class="chip">2G / 3G / 4G / 5G RAN</span>
+        <span class="chip">Python Automation</span>
+        <span class="chip">QGIS Headless</span>
+        <span class="chip">Nokia AirScale / NetAct</span>
+        <span class="chip">KPI Tuning</span>
+        <span class="chip">CI/CD Orchestration</span>
+        <span class="chip">Cloud-Native Tooling</span>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-main">
+          <span>🚀 Explore Architecture</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn-glass">
+          <span>💬 Initiate Signal</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Telemetry Bar -->
+  <div class="telemetry-section">
+    <div class="telemetry-grid">
+      <div class="telemetry-card">
+        <div class="telemetry-val" data-target="10">10+</div>
+        <div class="telemetry-lbl">Years International RAN</div>
+      </div>
+      <div class="telemetry-card">
+        <div class="telemetry-val" data-target="2000">2,000+</div>
+        <div class="telemetry-lbl">RAN Sites Modernized</div>
+      </div>
+      <div class="telemetry-card">
+        <div class="telemetry-val" data-target="6">6+</div>
+        <div class="telemetry-lbl">Custom Automation Suites</div>
+      </div>
+      <div class="telemetry-card">
+        <div class="telemetry-val" data-target="10">10</div>
+        <div class="telemetry-lbl">Industry Certifications</div>
       </div>
     </div>
   </div>
 
-  <div class="stats-bar">
-    <div class="stat"><div class="stat-number">10+</div><div class="stat-label">Years Experience</div></div>
-    <div class="stat"><div class="stat-number">2,000+</div><div class="stat-label">Sites Integrated</div></div>
-    <div class="stat"><div class="stat-number">5</div><div class="stat-label">Automation Suites</div></div>
-    <div class="stat"><div class="stat-number">10</div><div class="stat-label">Certifications</div></div>
-    <div class="stat"><div class="stat-number">3</div><div class="stat-label">Languages</div></div>
-  </div>
-
+  <!-- About & Tech Stack -->
   <section id="about">
-    <p class="section-label">About Me</p>
-    <h2>What I Bring to Your Team</h2>
-    <div class="section-divider"></div>
-    <p style="max-width:700px;color:#374151;margin-bottom:2.5rem;font-size:1rem;">
-      I specialize in turning complex telecom operations into streamlined, automated workflows. From integrating 2,000+ RAN sites to building Python automation suites that replace days of manual work — I deliver measurable results with precision and speed.
-    </p>
-    <div class="skills-grid">
-      <div class="skill-card"><div class="skill-icon">📡</div><h3>RAN Integration</h3><p>BTS / eNodeB / gNodeB remote commissioning across multi-vendor environments</p></div>
-      <div class="skill-card"><div class="skill-icon">📊</div><h3>KPI Optimization</h3><p>CSFB, HOSR, CSSR, DCR — root-cause analysis and corrective tuning</p></div>
-      <div class="skill-card"><div class="skill-icon">🤖</div><h3>Process Automation</h3><p>Python, VBA, Power Automate — eliminating manual reporting and workflows</p></div>
-      <div class="skill-card"><div class="skill-icon">🗺️</div><h3>Geospatial Analysis</h3><p>QGIS-based neighbour audits, coverage analysis, and site planning</p></div>
-      <div class="skill-card"><div class="skill-icon">🔧</div><h3>Nokia Ecosystem</h3><p>NetAct, AirScale, Site Manager, EdenNet — deep platform expertise</p></div>
-      <div class="skill-card"><div class="skill-icon">📈</div><h3>Reporting &amp; BI</h3><p>Power BI dashboards, automated KPI reports, SharePoint boards</p></div>
+    <div class="section-head">
+      <div class="section-tag">Core Competencies</div>
+      <h2 class="section-title">Engineered for Network Precision</h2>
+      <p class="section-desc">Replacing days of error-prone manual telecom operations with robust, scalable software architecture.</p>
     </div>
-  </section>
 
-  <section id="projects" style="background:#f8fafc;max-width:100%;padding:5rem 2rem;">
-    <div style="max-width:1100px;margin:0 auto;">
-      <p class="section-label">Automation Portfolio</p>
-      <h2>Projects That Delivered Real Impact</h2>
-      <div class="section-divider"></div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <span class="project-tag">Reporting Automation</span>
-          <h3>Automated Email Reporting Suite</h3>
-          <p>End-to-end automation of Nokia MWINGZ NPO 48H performance reports — from data extraction to formatted email delivery.</p>
-          <div class="project-impact">⚡ Reduced report production from ~4 hours to under 10 minutes</div>
-          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">SMTP</span><span class="stack-tag">Excel</span><span class="stack-tag">GitHub Actions</span></div>
+    <div class="skills-matrix" id="skills">
+      <div class="glass-card skill-card">
+        <div class="skill-icon-wrapper">📡</div>
+        <h3>RAN Architecture &amp; Integration</h3>
+        <p>Commissioning BTS, eNodeB, and gNodeB platforms across multi-vendor MORAN/MOCN rollouts. SCF/RFDS configurations, massive MIMO, and NOC cutovers.</p>
+        <div class="skill-tags">
+          <span class="mini-tag">Nokia AirScale</span>
+          <span class="mini-tag">Huawei SWAP</span>
+          <span class="mini-tag">5G NR</span>
+          <span class="mini-tag">NetAct</span>
         </div>
-        <div class="project-card">
-          <span class="project-tag">Geospatial Automation</span>
-          <h3>RAN NPO ToolBox</h3>
-          <p>QGIS-based MultiRat Neighbour Audit toolkit for automated detection of missing, redundant, and misaligned neighbour relations.</p>
-          <div class="project-impact">📍 Audits that took days now run in minutes across full clusters</div>
-          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">QGIS</span><span class="stack-tag">PyQGIS</span><span class="stack-tag">GeoPandas</span></div>
+      </div>
+
+      <div class="glass-card skill-card">
+        <div class="skill-icon-wrapper">⚡</div>
+        <h3>Telecom Software Automation</h3>
+        <p>Building production-grade Python toolkits for automated data parsing, cluster consistency auditing, and report generation pipelines.</p>
+        <div class="skill-tags">
+          <span class="mini-tag">Python 3.12</span>
+          <span class="mini-tag">Pandas</span>
+          <span class="mini-tag">Regex Parsers</span>
+          <span class="mini-tag">AsyncIO</span>
         </div>
-        <div class="project-card">
-          <span class="project-tag">Integration Automation</span>
-          <h3>X-Sector Automation Suite</h3>
-          <p>Automated X-sector site configuration, validation, and commissioning workflows — reducing engineer touchpoints on bulk rollouts.</p>
-          <div class="project-impact">🔧 Supports parallel processing of multi-sector site batches</div>
-          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">Nokia NetAct</span><span class="stack-tag">SSH</span><span class="stack-tag">Pandas</span></div>
+      </div>
+
+      <div class="glass-card skill-card">
+        <div class="skill-icon-wrapper">🗺️</div>
+        <h3>Geospatial NPO Intelligence</h3>
+        <p>Developing automated QGIS/PyQGIS plugins and headless Docker pipelines to audit multi-RAT neighbor relations and geographical anomalies.</p>
+        <div class="skill-tags">
+          <span class="mini-tag">QGIS / PyQGIS</span>
+          <span class="mini-tag">GeoPandas</span>
+          <span class="mini-tag">Neighbor Audits</span>
+          <span class="mini-tag">Shapefiles</span>
         </div>
-        <div class="project-card">
-          <span class="project-tag">Data Processing</span>
-          <h3>Combined Huawei Dumps</h3>
-          <p>Automated parsing, merging, and analysis of large-scale Huawei configuration dumps to support SWAP migration audits.</p>
-          <div class="project-impact">📊 Processes thousands of records across legacy vendor exports</div>
-          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">Regex</span><span class="stack-tag">Excel</span></div>
-        </div>
-        <div class="project-card">
-          <span class="project-tag">QGIS Headless</span>
-          <h3>QGIS Automation Suite</h3>
-          <p>Headless QGIS scripting toolkit for running geospatial analysis pipelines without a GUI — ideal for CI/CD integration.</p>
-          <div class="project-impact">🗺️ Enables server-side geospatial processing at scale</div>
-          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">QGIS</span><span class="stack-tag">Docker</span><span class="stack-tag">CI/CD</span></div>
-        </div>
-        <div class="project-card">
-          <span class="project-tag">Project Template</span>
-          <h3>ProjectBase — Nokia SPA Template</h3>
-          <p>Standardized Nokia automation project scaffold with governance, CI/CD quality gates, and delivery metrics built in from day one.</p>
-          <div class="project-impact">🚀 Cuts new project bootstrap time from days to hours</div>
-          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">SDLC</span><span class="stack-tag">Markdown</span></div>
+      </div>
+
+      <div class="glass-card skill-card">
+        <div class="skill-icon-wrapper">📊</div>
+        <h3>KPI Tuning &amp; Optimization</h3>
+        <p>Root-cause diagnostics and corrective parameter tuning for CSFB, HOSR, CSSR, throughput degradation, and traffic load balancing.</p>
+        <div class="skill-tags">
+          <span class="mini-tag">Root-Cause Analysis</span>
+          <span class="mini-tag">EdenNet</span>
+          <span class="mini-tag">Power BI</span>
+          <span class="mini-tag">48H Reports</span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-head">
+      <div class="section-tag">Flagship Deployments</div>
+      <h2 class="section-title">Production Tooling &amp; Automation</h2>
+      <p class="section-desc">Real-world automation platforms running inside telecom operations that save hundreds of engineering hours.</p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="glass-card project-card">
+        <div class="project-meta">
+          <span class="project-category">Reporting Ops</span>
+          <span style="font-size:1.2rem;">⚡</span>
+        </div>
+        <h3 class="project-title">Automated Email Reporting Suite</h3>
+        <p class="project-text">End-to-end automated pipeline executing Nokia MWINGZ NPO 48H performance evaluations, merging complex telemetry, and delivering structured reports to executive stakeholders.</p>
+        <div class="impact-box">⚡ Reduced turnaround time from ~4 hours to under 10 minutes</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">SMTP Automation</span>
+          <span class="tech-pill">Excel Engine</span>
+          <span class="tech-pill">GitHub Actions</span>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="glass-card project-card">
+        <div class="project-meta">
+          <span class="project-category">Geospatial Intelligence</span>
+          <span style="font-size:1.2rem;">🗺️</span>
+        </div>
+        <h3 class="project-title">RAN NPO ToolBox (QGIS MultiRAT)</h3>
+        <p class="project-text">Autonomous spatial auditing engine that computes missing, redundant, and inverted neighbor relations across 2G/3G/4G/5G clusters with spatial geometry validation.</p>
+        <div class="impact-box">📍 Full cluster audits running in minutes instead of multi-day cycles</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">PyQGIS</span>
+          <span class="tech-pill">GeoPandas</span>
+          <span class="tech-pill">MultiRAT</span>
+          <span class="tech-pill">Topology Engine</span>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="glass-card project-card">
+        <div class="project-meta">
+          <span class="project-category">RAN Modernization</span>
+          <span style="font-size:1.2rem;">🔧</span>
+        </div>
+        <h3 class="project-title">X-Sector Automation Suite</h3>
+        <p class="project-text">CLI and workflow automation orchestrating bulk sector commissioning, remote configuration sanity checks, and NetAct parameter deployments across rollouts.</p>
+        <div class="impact-box">🚀 High-concurrency processing with zero engineer configuration drift</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">NetAct API</span>
+          <span class="tech-pill">SSH Orchestration</span>
+          <span class="tech-pill">Pandas</span>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="glass-card project-card">
+        <div class="project-meta">
+          <span class="project-category">Data Engineering</span>
+          <span style="font-size:1.2rem;">📊</span>
+        </div>
+        <h3 class="project-title">Combined Huawei Dumps Engine</h3>
+        <p class="project-text">Scalable ETL processor parsing millions of raw XML/CSV vendor dump records to support large-scale SWAP network migrations and audit trails.</p>
+        <div class="impact-box">💾 Millions of parameters parsed and validated in seconds</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">Python ETL</span>
+          <span class="tech-pill">High-Performance Regex</span>
+          <span class="tech-pill">Data Sanitization</span>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="glass-card project-card">
+        <div class="project-meta">
+          <span class="project-category">Headless Pipelines</span>
+          <span style="font-size:1.2rem;">🛰️</span>
+        </div>
+        <h3 class="project-title">QGIS Automation Suite (Headless)</h3>
+        <p class="project-text">Dockerized geospatial analysis suite executing heavy spatial pipelines server-side without GUI overhead, ready for continuous integration triggers.</p>
+        <div class="impact-box">🌐 Server-side spatial computing with automated CI testing</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">Headless QGIS</span>
+          <span class="tech-pill">Docker</span>
+          <span class="tech-pill">Linux</span>
+          <span class="tech-pill">CI/CD</span>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="glass-card project-card">
+        <div class="project-meta">
+          <span class="project-category">Architecture Standards</span>
+          <span style="font-size:1.2rem;">📐</span>
+        </div>
+        <h3 class="project-title">ProjectBase Scaffold</h3>
+        <p class="project-text">Enterprise engineering scaffold establishing automated CI/CD quality gates, linting standards, and delivery metrics across all tooling repos.</p>
+        <div class="impact-box">⚡ Instant project initialization with zero setup debt</div>
+        <div class="tech-stack-row">
+          <span class="tech-pill">GitHub Actions</span>
+          <span class="tech-pill">Pre-commit Gates</span>
+          <span class="tech-pill">Semantic SDLC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Experience -->
   <section id="experience">
-    <p class="section-label">Career</p>
-    <h2>Professional Experience</h2>
-    <div class="section-divider"></div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-header">
-          <span class="timeline-company">Nokia Networks</span>
-          <span class="timeline-date">Apr 2022 – Present</span>
+    <div class="section-head">
+      <div class="section-tag">Career Trajectory</div>
+      <h2 class="section-title">Proven Track Record</h2>
+      <p class="section-desc">Key leadership and execution milestones at Tier-1 telecom environments.</p>
+    </div>
+
+    <div class="timeline-container">
+      <!-- Nokia Senior -->
+      <div class="timeline-card">
+        <div class="timeline-node"></div>
+        <div class="timeline-card-content glass-card">
+          <div class="timeline-top">
+            <h3 class="company-name">Nokia Networks</h3>
+            <span class="timeline-badge">Apr 2022 – Present</span>
+          </div>
+          <div class="role-title">RAN Performance &amp; Optimization Specialist · Lisbon, Portugal</div>
+          <ul class="timeline-points">
+            <li>Spearheaded KPI-driven performance monitoring and root-cause analysis for major SWAP 2G/3G/4G programs.</li>
+            <li>Designed and maintained network audits, traffic redistribution plans, and parameter tuning strategies.</li>
+            <li>Architected custom Python automation ecosystems that eradicated repetitive reporting bottlenecks across engineering units.</li>
+            <li>Provided executive analytics, KPI forecast modeling, and data-driven guidance for senior management.</li>
+          </ul>
+          <div class="award-card">
+            <span>🎖️</span>
+            <span>Excellence in Commitment Award — MWingz Project (2023)</span>
+          </div>
         </div>
-        <div class="timeline-role">RAN Performance &amp; Optimization Specialist · Lisbon, Portugal</div>
-        <ul>
-          <li>Delivered KPI-driven performance reports to customer technical teams on SWAP 2G/3G/4G project</li>
-          <li>Performed regular network audits, root-cause analysis, and corrective action design</li>
-          <li>Built innovative automation solutions that significantly increased project efficiency</li>
-          <li>Supported strategic network decisions via insights, dashboards, and reporting</li>
-        </ul>
-        <div class="award-badge">🎖 Excellence in Commitment Award — MWingz Project (2023)</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-header">
-          <span class="timeline-company">Nokia Networks</span>
-          <span class="timeline-date">Feb 2016 – Mar 2022</span>
+
+      <!-- Nokia Engineer -->
+      <div class="timeline-card">
+        <div class="timeline-node"></div>
+        <div class="timeline-card-content glass-card">
+          <div class="timeline-top">
+            <h3 class="company-name">Nokia Networks</h3>
+            <span class="timeline-badge">Feb 2016 – Mar 2022</span>
+          </div>
+          <div class="role-title">RAN Integration &amp; Commissioning Engineer · Lisbon, Portugal</div>
+          <ul class="timeline-points">
+            <li>Directed remote integration and cutover of <strong>2,000+ multi-technology sites</strong> during massive multi-vendor MORAN &amp; MOCN modernizations.</li>
+            <li>Conducted end-to-end commissioning, sector re-alignments, SCF/RFDS scripts validation, and tech upgrades across 2G/3G/4G/5G.</li>
+            <li>Managed live verification call testing, alarm resolution, and strict SLA compliance for Tier-1 operator handovers.</li>
+            <li>Coordinated seamless rollouts across field operations, RF planning, and project management offices internationally.</li>
+          </ul>
         </div>
-        <div class="timeline-role">RAN Integration &amp; Commissioning Engineer · Lisbon, Portugal</div>
-        <ul>
-          <li>Led integration of <strong>2,000+ Huawei sites</strong> during multi-vendor RAN modernization (MORAN &amp; MOCN)</li>
-          <li>Managed remote commissioning, sector expansions, and technology upgrades (2G/3G/4G/5G)</li>
-          <li>Executed SCF/RFDS configurations, test calls, and NOC handovers at scale</li>
-          <li>Collaborated across field, integration, and project management teams internationally</li>
-        </ul>
       </div>
     </div>
   </section>
 
-  <section id="certifications" style="background:#f8fafc;max-width:100%;padding:5rem 2rem;">
-    <div style="max-width:1100px;margin:0 auto;">
-      <p class="section-label">Credentials</p>
-      <h2>Certifications</h2>
-      <div class="section-divider"></div>
-      <div class="certs-grid">
-        <div class="cert-item">5G Radio Site Cluster Optimization (NCSS NPS)</div>
-        <div class="cert-item">5G Radio Optimisation – Expert</div>
-        <div class="cert-item">NCSA 5G Solution</div>
-        <div class="cert-item">GS Deploy – Microwave Wavence Services</div>
-        <div class="cert-item">ESD &amp; Calibration Awareness</div>
-        <div class="cert-item">L2 – I Own Digital (Nokia)</div>
-        <div class="cert-item">L1 – Data Analyst &amp; Data Engineer (Nokia)</div>
-        <div class="cert-item">L1 – Scrum Master (Agile Nokia Program)</div>
-        <div class="cert-item">CCP – IEFP Portugal</div>
-        <div class="cert-item">Digital Trainer – Technical Training in Digital &amp; Telecom</div>
+  <!-- Certifications -->
+  <section id="certifications">
+    <div class="section-head">
+      <div class="section-tag">Continuous Mastery</div>
+      <h2 class="section-title">Certifications &amp; Accreditations</h2>
+      <p class="section-desc">Certified in bleeding-edge 5G radio optimization, agile delivery, and modern data engineering.</p>
+    </div>
+
+    <div class="certs-matrix">
+      <div class="cert-card">
+        <div class="cert-icon">📡</div>
+        <div class="cert-info">
+          <h4>5G Radio Site Cluster Optimization</h4>
+          <span>NCSS NPS Expert</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⚡</div>
+        <div class="cert-info">
+          <h4>5G Radio Optimisation – Expert</h4>
+          <span>Nokia Professional</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🌐</div>
+        <div class="cert-info">
+          <h4>NCSA 5G Solution</h4>
+          <span>Nokia Certified</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📡</div>
+        <div class="cert-info">
+          <h4>GS Deploy – Microwave Wavence Services</h4>
+          <span>Nokia Deployment</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📊</div>
+        <div class="cert-info">
+          <h4>L1 Data Analyst &amp; Data Engineer</h4>
+          <span>Nokia Digital</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">💻</div>
+        <div class="cert-info">
+          <h4>L2 I Own Digital</h4>
+          <span>Digital Transformation</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🔄</div>
+        <div class="cert-info">
+          <h4>L1 Scrum Master</h4>
+          <span>Agile Nokia Program</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div class="cert-info">
+          <h4>CCP Certified Trainer</h4>
+          <span>IEFP Portugal</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🛡️</div>
+        <div class="cert-info">
+          <h4>ESD &amp; Calibration Awareness</h4>
+          <span>Quality Standard</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🚀</div>
+        <div class="cert-info">
+          <h4>Digital Trainer</h4>
+          <span>Technical Telecom Training</span>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Terminal HUD / Contact -->
   <section id="contact">
-    <div class="contact-section">
-      <p class="section-label" style="color:#7dd3fc;">Get In Touch</p>
-      <h2>Available for New Opportunities</h2>
-      <p>Open to freelance projects, technical consulting, and senior remote RAN engagements worldwide.</p>
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/heltonlimatrindade" target="_blank" class="contact-btn">🔗 LinkedIn</a>
-        <a href="https://wa.me/351962462317" target="_blank" class="contact-btn">💬 WhatsApp</a>
-        <a href="https://github.com/heltonlimatrindade" target="_blank" class="contact-btn">💻 GitHub</a>
-        <a href="mailto:heltonlimatrindade@gmail.com" class="contact-btn">✉️ Email</a>
-        <a href="cv_helton_lima.pdf" download class="contact-btn">📄 Download CV</a>
+    <div class="terminal-container">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <div class="t-dot t-red"></div>
+          <div class="t-dot t-yellow"></div>
+          <div class="t-dot t-green"></div>
+        </div>
+        <div class="terminal-title">hlt@ran-telecom-station:~</div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:#34d399;">● READY</div>
+      </div>
+      <div class="terminal-body">
+        <div class="section-tag" style="color:var(--cyan); margin-bottom:1rem;">Establish Connection</div>
+        <h2>Let's Build Autonomous Networks</h2>
+        <p>Available for senior RAN architecture, full-scale automation consulting, and high-impact telecommunication engineering worldwide.</p>
+        
+        <div class="connect-grid">
+          <a href="https://www.linkedin.com/in/heltonlimatrindade" target="_blank" rel="noopener noreferrer" class="connect-btn">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://github.com/heltonlimatrindade" target="_blank" rel="noopener noreferrer" class="connect-btn">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+
+          <a href="https://wa.me/351962462317" target="_blank" rel="noopener noreferrer" class="connect-btn">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+
+          <button onclick="copyEmail()" class="connect-btn" style="cursor:pointer; background:rgba(0,240,255,0.06); border-color:var(--cyan); color:var(--cyan);">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>Copy Email</span>
+          </button>
+        </div>
+
+        <div style="font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:var(--text-dim);">
+          Direct Endpoint: <span style="color:var(--sky);">heltonlimatrindade@gmail.com</span>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2026 Helton Lima da Trindade · Senior RAN Engineer · Lisbon, Portugal</p>
+    <p>© 2026 Helton Lima da Trindade · Senior RAN &amp; Automation Architecture · Lisbon, Portugal</p>
   </footer>
 
+  <!-- Interactive 5G Mesh Canvas and HUD Logic -->
+  <script>
+    // 5G Interactive Mesh & Signal Particle Network
+    const canvas = document.getElementById('mesh-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height, particles = [];
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Node {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        this.radius = Math.random() * 2 + 1.2;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = '#00f0ff';
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = '#00f0ff';
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+    }
+
+    const nodeCount = Math.min(Math.floor(window.innerWidth / 20), 65);
+    for (let i = 0; i < nodeCount; i++) {
+      particles.push(new Node());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 130) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(0, 240, 255, ${0.15 * (1 - dist / 130)})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Navbar Scroll Effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Copy Email Toast
+    function copyEmail() {
+      navigator.clipboard.writeText('heltonlimatrindade@gmail.com');
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+  </script>
 </body>
 </html>
